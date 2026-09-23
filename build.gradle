@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.javalin:javalin:6.7.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.2'
+    implementation 'org.xerial:sqlite-jdbc:3.47.1.0'
+    implementation 'org.slf4j:slf4j-simple:2.0.16'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'com.neurospike.Main'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'failed', 'skipped'
+    }
+}
