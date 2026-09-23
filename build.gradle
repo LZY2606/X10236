@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    javalinVersion = '6.3.0'
+    sqliteVersion = '3.46.1.3'
+    jacksonVersion = '2.18.2'
+}
+
+dependencies {
+    implementation "io.javalin:javalin:${javalinVersion}"
+    implementation "org.xerial:sqlite-jdbc:${sqliteVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    implementation 'org.slf4j:slf4j-simple:2.0.16'
+    testImplementation platform('org.junit:junit-bom:5.11.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'org.neuro.spikedrift.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat = 'full'
+    }
+}
+
+tasks.named('run') {
+    // 数据文件默认写入工作目录，可通过 -Dspikedrift.db=... 覆盖
+}
