@@ -1,0 +1,5 @@
+{
+  "op": "renumber",
+  "comment": "cluster 2 becomes cluster 7; unit identity U000002 must not change",
+  "mapping": {"2": 7}
+}

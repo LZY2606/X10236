@@ -1,0 +1,6 @@
+{
+  "op": "resolve",
+  "comment": "senior reviewer resolves the conflict in favour of ACCEPT",
+  "clusterNo": 1,
+  "chosen": "ACCEPT"
+}

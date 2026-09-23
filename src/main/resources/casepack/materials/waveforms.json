@@ -1,0 +1,464 @@
+{
+  "op": "waveforms",
+  "waveforms": [
+    {
+      "id": "spk-a01",
+      "channel": 0,
+      "time": {
+        "value": "1.000",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-55",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.8,
+        -11.0,
+        -35.8,
+        -55.0,
+        -30.3,
+        -5.5,
+        6.6,
+        2.8
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-a02",
+      "channel": 0,
+      "time": {
+        "value": "2.000",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-58",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.9,
+        -11.6,
+        -37.7,
+        -58.0,
+        -31.9,
+        -5.8,
+        7.0,
+        2.9
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-a03",
+      "channel": 0,
+      "time": {
+        "value": "2.001",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-57",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.9,
+        -11.4,
+        -37.1,
+        -57.0,
+        -31.4,
+        -5.7,
+        6.8,
+        2.9
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-a04",
+      "channel": 0,
+      "time": {
+        "value": "3.0000",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-56",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.8,
+        -11.2,
+        -36.4,
+        -56.0,
+        -30.8,
+        -5.6,
+        6.7,
+        2.8
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-a05",
+      "channel": 1,
+      "time": {
+        "value": "3.0001",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-12",
+        "unit": "uV"
+      },
+      "samples": [
+        -0.6,
+        -2.4,
+        -7.8,
+        -12.0,
+        -6.6,
+        -1.2,
+        1.4,
+        0.6
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-a06",
+      "channel": 0,
+      "time": {
+        "value": "5.000",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-54",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.7,
+        -10.8,
+        -35.1,
+        -54.0,
+        -29.7,
+        -5.4,
+        6.5,
+        2.7
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-a07",
+      "channel": 0,
+      "time": {
+        "value": "4000",
+        "unit": "ms",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-53",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.7,
+        -10.6,
+        -34.5,
+        -53.0,
+        -29.2,
+        -5.3,
+        6.4,
+        2.7
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-b01",
+      "channel": 1,
+      "time": {
+        "value": "10",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-50",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.5,
+        -10.0,
+        -32.5,
+        -50.0,
+        -27.5,
+        -5.0,
+        6.0,
+        2.5
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-b02",
+      "channel": 1,
+      "time": {
+        "value": "30",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-60",
+        "unit": "uV"
+      },
+      "samples": [
+        -3.0,
+        -12.0,
+        -39.0,
+        -60.0,
+        -33.0,
+        -6.0,
+        7.2,
+        3.0
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-b03",
+      "channel": 1,
+      "time": {
+        "value": "50",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-70",
+        "unit": "uV"
+      },
+      "samples": [
+        -3.5,
+        -14.0,
+        -45.5,
+        -70.0,
+        -38.5,
+        -7.0,
+        8.4,
+        3.5
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-b04",
+      "channel": 1,
+      "time": {
+        "value": "70",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-80",
+        "unit": "uV"
+      },
+      "samples": [
+        -4.0,
+        -16.0,
+        -52.0,
+        -80.0,
+        -44.0,
+        -8.0,
+        9.6,
+        4.0
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-b05",
+      "channel": 1,
+      "time": {
+        "value": "90",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-90",
+        "unit": "uV"
+      },
+      "samples": [
+        -4.5,
+        -18.0,
+        -58.5,
+        -90.0,
+        -49.5,
+        -9.0,
+        10.8,
+        4.5
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-b06",
+      "channel": 1,
+      "time": {
+        "value": "110",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-0.095",
+        "unit": "mV"
+      },
+      "samples": [
+        -4.8,
+        -19.0,
+        -61.8,
+        -95.0,
+        -52.3,
+        -9.5,
+        11.4,
+        4.8
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-c01",
+      "channel": 2,
+      "time": {
+        "value": "150",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-40",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.0,
+        -8.0,
+        -26.0,
+        -40.0,
+        -22.0,
+        -4.0,
+        4.8,
+        2.0
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-c02",
+      "channel": 2,
+      "time": {
+        "value": "200",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-42",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.1,
+        -8.4,
+        -27.3,
+        -42.0,
+        -23.1,
+        -4.2,
+        5.0,
+        2.1
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-c03",
+      "channel": 2,
+      "time": {
+        "value": "250",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "-41",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.1,
+        -8.2,
+        -26.7,
+        -41.0,
+        -22.6,
+        -4.1,
+        4.9,
+        2.1
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    },
+    {
+      "id": "spk-c04",
+      "channel": 2,
+      "time": {
+        "value": "160",
+        "unit": "s",
+        "basis": "recording"
+      },
+      "amplitude": {
+        "value": "NaN%",
+        "unit": "uV"
+      },
+      "samples": [
+        -2.0,
+        -8.0,
+        -26.0,
+        -40.0,
+        -22.0,
+        -4.0,
+        4.8,
+        2.0
+      ],
+      "sampleRate": {
+        "value": "30",
+        "unit": "kHz"
+      }
+    }
+  ]
+}

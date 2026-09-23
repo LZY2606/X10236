@@ -1,0 +1,9 @@
+{
+  "op": "thresholds",
+  "thresholds": [
+    {"id": "thr-ch0-v1", "channel": 0, "threshold": {"value": "-45", "unit": "uV"}, "version": 1},
+    {"id": "thr-ch1-v1", "channel": 1, "threshold": {"value": "-45", "unit": "uV"}, "version": 1},
+    {"id": "thr-ch2-v1", "channel": 2, "threshold": {"value": "-45", "unit": "uV"}, "version": 1},
+    {"id": "thr-ch3-v1", "channel": 3, "threshold": {"value": "-45", "unit": "uV"}, "version": 1}
+  ]
+}

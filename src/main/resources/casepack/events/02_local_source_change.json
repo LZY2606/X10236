@@ -1,0 +1,14 @@
+{
+  "op": "replaceWaveform",
+  "comment": "local source change: spk-b03 amplitude corrected -70 -> -68 uV; only U000002 derived results may be invalidated",
+  "id": "spk-b03",
+  "with": {
+    "id": "spk-b03b",
+    "channel": 1,
+    "time": {"value": "50", "unit": "s", "basis": "recording"},
+    "amplitude": {"value": "-68", "unit": "uV"},
+    "samples": [-3.4, -13.6, -44.2, -68.0, -37.4, -6.8, 8.2, 3.4],
+    "sampleRate": {"value": "30", "unit": "kHz"}
+  },
+  "paramVersion": "fv1"
+}

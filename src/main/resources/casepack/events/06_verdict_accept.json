@@ -1,0 +1,7 @@
+{
+  "op": "verdict",
+  "comment": "reviewer A accepts child cluster 1",
+  "clusterNo": 1,
+  "accept": true,
+  "rationale": "clean autocorrelogram, drift within tolerance"
+}

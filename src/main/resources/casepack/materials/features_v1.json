@@ -1,0 +1,8 @@
+{
+  "op": "features",
+  "featureVersion": {
+    "id": "fv1",
+    "name": "pca+isi",
+    "params": {"components": 3, "refractoryMs": 1.5, "coincidenceMs": 0.3, "rateBinS": 10}
+  }
+}

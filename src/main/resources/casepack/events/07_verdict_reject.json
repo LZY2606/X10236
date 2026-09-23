@@ -1,0 +1,7 @@
+{
+  "op": "verdict",
+  "comment": "reviewer B rejects the same child on the same parents -> conflict, both candidates kept",
+  "clusterNo": 1,
+  "accept": false,
+  "rationale": "refractory violations indicate contamination"
+}

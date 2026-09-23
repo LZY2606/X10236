@@ -1,0 +1,5 @@
+{
+  "op": "addThreshold",
+  "comment": "parameter revision: channel 1 detection threshold raised to -55 uV (version 2)",
+  "threshold": {"id": "thr-ch1-v2", "channel": 1, "threshold": {"value": "-55", "unit": "uV"}, "version": 2}
+}

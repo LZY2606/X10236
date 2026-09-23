@@ -1,0 +1,60 @@
+{
+  "op": "labels",
+  "units": [
+    {
+      "id": "U000001",
+      "origin": "casepack:cluster-1"
+    },
+    {
+      "id": "U000002",
+      "origin": "casepack:cluster-2"
+    },
+    {
+      "id": "U000003",
+      "origin": "casepack:cluster-3"
+    }
+  ],
+  "labels": [
+    {
+      "id": "L-v1-c1",
+      "labelSetVersion": 1,
+      "clusterNo": 1,
+      "unitId": "U000001",
+      "spikeIds": [
+        "spk-a01",
+        "spk-a02",
+        "spk-a03",
+        "spk-a04",
+        "spk-a05",
+        "spk-a06",
+        "spk-a07"
+      ]
+    },
+    {
+      "id": "L-v1-c2",
+      "labelSetVersion": 1,
+      "clusterNo": 2,
+      "unitId": "U000002",
+      "spikeIds": [
+        "spk-b01",
+        "spk-b02",
+        "spk-b03",
+        "spk-b04",
+        "spk-b05",
+        "spk-b06"
+      ]
+    },
+    {
+      "id": "L-v1-c3",
+      "labelSetVersion": 1,
+      "clusterNo": 3,
+      "unitId": "U000003",
+      "spikeIds": [
+        "spk-c01",
+        "spk-c02",
+        "spk-c03",
+        "spk-c04"
+      ]
+    }
+  ]
+}

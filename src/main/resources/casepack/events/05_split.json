@@ -1,0 +1,9 @@
+{
+  "op": "split",
+  "comment": "split cluster 1; spk-a04/spk-a05 (coincident pair) are shared by both children",
+  "clusterNo": 1,
+  "children": [
+    ["spk-a01", "spk-a02", "spk-a03", "spk-a04", "spk-a07"],
+    ["spk-a04", "spk-a05", "spk-a06"]
+  ]
+}

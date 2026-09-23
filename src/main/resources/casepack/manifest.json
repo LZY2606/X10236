@@ -1,0 +1,24 @@
+{
+  "name": "脉冲簇谱：神经棘波候选、漂移簇与人工裁定谱系",
+  "version": "1.0",
+  "description": "Neural electrophysiology spike-sorting lineage case: multi-channel detection events, waveform snippets and recording times imported for unit clustering; merge/split/drift evidence stays traceable.",
+  "materials": [
+    "materials/probe.json",
+    "materials/thresholds_v1.json",
+    "materials/features_v1.json",
+    "materials/waveforms.json",
+    "materials/labels_v1.json",
+    "materials/compute_initial.json"
+  ],
+  "events": [
+    "events/01_threshold_revision.json",
+    "events/02_local_source_change.json",
+    "events/03_renumber.json",
+    "events/04_window_change.json",
+    "events/05_split.json",
+    "events/06_verdict_accept.json",
+    "events/07_verdict_reject.json",
+    "events/08_resolve.json",
+    "events/09_window_reset.json"
+  ]
+}

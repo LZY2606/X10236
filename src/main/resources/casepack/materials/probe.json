@@ -1,0 +1,13 @@
+{
+  "op": "probe",
+  "geometry": {
+    "id": "probe-linear-4",
+    "frame": "probe-local-um",
+    "sites": [
+      {"siteId": "s0", "channel": 0, "x": {"value": "0", "unit": "um"}, "y": {"value": "0", "unit": "um"}},
+      {"siteId": "s1", "channel": 1, "x": {"value": "0", "unit": "um"}, "y": {"value": "50", "unit": "um"}},
+      {"siteId": "s2", "channel": 2, "x": {"value": "0", "unit": "um"}, "y": {"value": "100", "unit": "um"}},
+      {"siteId": "s3", "channel": 3, "x": {"value": "0", "unit": "um"}, "y": {"value": "150", "unit": "um"}}
+    ]
+  }
+}

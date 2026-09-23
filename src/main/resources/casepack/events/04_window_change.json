@@ -1,0 +1,7 @@
+{
+  "op": "window",
+  "comment": "window [0,200] -> [100,200] s; only intersecting clusters (U000002, U000003) are recomputed",
+  "start": 100,
+  "end": 200,
+  "paramVersion": "fv1"
+}
