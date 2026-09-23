@@ -1,0 +1,2076 @@
+{
+ "case": "pulse-cluster-spectrum",
+ "title": "脉冲簇谱：神经棘波候选、漂移簇与人工裁定谱系",
+ "description": "Neurophysiology team imports multi-channel detection events, waveform snippets and recording times to build traceable merge/split/drift evidence for unit clustering.",
+ "materials": {
+  "importEventId": "evt-import-v1",
+  "probeGeometry": {
+   "version": 1,
+   "frame": "probe_um",
+   "sites": [
+    {
+     "channel": 0,
+     "xUm": 0.0,
+     "yUm": 0.0
+    },
+    {
+     "channel": 1,
+     "xUm": 0.0,
+     "yUm": 40.0
+    },
+    {
+     "channel": 2,
+     "xUm": 40.0,
+     "yUm": 0.0
+    },
+    {
+     "channel": 3,
+     "xUm": 40.0,
+     "yUm": 40.0
+    }
+   ]
+  },
+  "detectionParams": {
+   "version": 1,
+   "thresholdUv": 60.0,
+   "refractoryMs": 1.0,
+   "windowStartMs": 0.0,
+   "windowEndMs": 60000.0
+  },
+  "featureSet": {
+   "version": 1,
+   "method": "pca-2d",
+   "inputDigest": ""
+  },
+  "units": [
+   {
+    "id": "unit-A",
+    "status": "active"
+   },
+   {
+    "id": "unit-B",
+    "status": "active"
+   },
+   {
+    "id": "unit-C",
+    "status": "active"
+   }
+  ],
+  "clusterLabels": [
+   {
+    "id": "lbl-1",
+    "featureSetId": "feat-v1",
+    "clusterIndex": 1,
+    "unitId": "unit-A"
+   },
+   {
+    "id": "lbl-2",
+    "featureSetId": "feat-v1",
+    "clusterIndex": 2,
+    "unitId": "unit-B"
+   },
+   {
+    "id": "lbl-3",
+    "featureSetId": "feat-v1",
+    "clusterIndex": 3,
+    "unitId": "unit-C"
+   }
+  ],
+  "waveformRefs": [
+   {
+    "id": "wref-spk-a-00",
+    "channel": 0,
+    "tStartMs": 5009.4,
+    "tEndMs": 5010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-00.bin"
+   },
+   {
+    "id": "wref-spk-a-01",
+    "channel": 0,
+    "tStartMs": 7009.4,
+    "tEndMs": 7010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-01.bin"
+   },
+   {
+    "id": "wref-spk-a-02",
+    "channel": 0,
+    "tStartMs": 9009.4,
+    "tEndMs": 9010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-02.bin"
+   },
+   {
+    "id": "wref-spk-a-03",
+    "channel": 0,
+    "tStartMs": 11009.4,
+    "tEndMs": 11010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-03.bin"
+   },
+   {
+    "id": "wref-spk-a-04",
+    "channel": 0,
+    "tStartMs": 13009.4,
+    "tEndMs": 13010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-04.bin"
+   },
+   {
+    "id": "wref-spk-a-05",
+    "channel": 0,
+    "tStartMs": 15009.4,
+    "tEndMs": 15010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-05.bin"
+   },
+   {
+    "id": "wref-spk-a-06",
+    "channel": 0,
+    "tStartMs": 17009.4,
+    "tEndMs": 17010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-06.bin"
+   },
+   {
+    "id": "wref-spk-a-07",
+    "channel": 0,
+    "tStartMs": 19009.4,
+    "tEndMs": 19010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-07.bin"
+   },
+   {
+    "id": "wref-spk-a-08",
+    "channel": 0,
+    "tStartMs": 21009.4,
+    "tEndMs": 21010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-08.bin"
+   },
+   {
+    "id": "wref-spk-a-09",
+    "channel": 0,
+    "tStartMs": 23009.4,
+    "tEndMs": 23010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-09.bin"
+   },
+   {
+    "id": "wref-spk-a-10",
+    "channel": 0,
+    "tStartMs": 25009.4,
+    "tEndMs": 25010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-10.bin"
+   },
+   {
+    "id": "wref-spk-a-11",
+    "channel": 0,
+    "tStartMs": 27009.4,
+    "tEndMs": 27010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-11.bin"
+   },
+   {
+    "id": "wref-spk-a-12",
+    "channel": 0,
+    "tStartMs": 29009.4,
+    "tEndMs": 29010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-12.bin"
+   },
+   {
+    "id": "wref-spk-a-13",
+    "channel": 0,
+    "tStartMs": 31009.4,
+    "tEndMs": 31010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-13.bin"
+   },
+   {
+    "id": "wref-spk-a-14",
+    "channel": 0,
+    "tStartMs": 33009.4,
+    "tEndMs": 33010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-14.bin"
+   },
+   {
+    "id": "wref-spk-a-15",
+    "channel": 0,
+    "tStartMs": 35009.4,
+    "tEndMs": 35010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-15.bin"
+   },
+   {
+    "id": "wref-spk-a-16",
+    "channel": 0,
+    "tStartMs": 37009.4,
+    "tEndMs": 37010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-16.bin"
+   },
+   {
+    "id": "wref-spk-a-17",
+    "channel": 0,
+    "tStartMs": 39009.4,
+    "tEndMs": 39010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-17.bin"
+   },
+   {
+    "id": "wref-spk-a-18",
+    "channel": 0,
+    "tStartMs": 41009.4,
+    "tEndMs": 41010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-18.bin"
+   },
+   {
+    "id": "wref-spk-a-19",
+    "channel": 0,
+    "tStartMs": 43009.4,
+    "tEndMs": 43010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-19.bin"
+   },
+   {
+    "id": "wref-spk-a-20",
+    "channel": 0,
+    "tStartMs": 45009.4,
+    "tEndMs": 45010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-20.bin"
+   },
+   {
+    "id": "wref-spk-a-21",
+    "channel": 0,
+    "tStartMs": 47009.4,
+    "tEndMs": 47010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-21.bin"
+   },
+   {
+    "id": "wref-spk-a-22",
+    "channel": 0,
+    "tStartMs": 49009.4,
+    "tEndMs": 49010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-22.bin"
+   },
+   {
+    "id": "wref-spk-a-23",
+    "channel": 0,
+    "tStartMs": 51009.4,
+    "tEndMs": 51010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-23.bin"
+   },
+   {
+    "id": "wref-spk-a-24",
+    "channel": 0,
+    "tStartMs": 53009.4,
+    "tEndMs": 53010.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-a-24.bin"
+   },
+   {
+    "id": "wref-spk-b-00",
+    "channel": 1,
+    "tStartMs": 499.4,
+    "tEndMs": 500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-00.bin"
+   },
+   {
+    "id": "wref-spk-b-01",
+    "channel": 1,
+    "tStartMs": 1999.4,
+    "tEndMs": 2000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-01.bin"
+   },
+   {
+    "id": "wref-spk-b-02",
+    "channel": 1,
+    "tStartMs": 3499.4,
+    "tEndMs": 3500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-02.bin"
+   },
+   {
+    "id": "wref-spk-b-03",
+    "channel": 1,
+    "tStartMs": 4999.4,
+    "tEndMs": 5000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-03.bin"
+   },
+   {
+    "id": "wref-spk-b-04",
+    "channel": 1,
+    "tStartMs": 6499.4,
+    "tEndMs": 6500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-04.bin"
+   },
+   {
+    "id": "wref-spk-b-05",
+    "channel": 1,
+    "tStartMs": 7999.4,
+    "tEndMs": 8000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-05.bin"
+   },
+   {
+    "id": "wref-spk-b-06",
+    "channel": 1,
+    "tStartMs": 9499.4,
+    "tEndMs": 9500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-06.bin"
+   },
+   {
+    "id": "wref-spk-b-07",
+    "channel": 1,
+    "tStartMs": 10999.4,
+    "tEndMs": 11000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-07.bin"
+   },
+   {
+    "id": "wref-spk-b-08",
+    "channel": 1,
+    "tStartMs": 12499.4,
+    "tEndMs": 12500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-08.bin"
+   },
+   {
+    "id": "wref-spk-b-09",
+    "channel": 1,
+    "tStartMs": 13999.4,
+    "tEndMs": 14000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-09.bin"
+   },
+   {
+    "id": "wref-spk-b-10",
+    "channel": 1,
+    "tStartMs": 15499.4,
+    "tEndMs": 15500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-10.bin"
+   },
+   {
+    "id": "wref-spk-b-10-rf",
+    "channel": 1,
+    "tStartMs": 15499.8,
+    "tEndMs": 15501.3,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-10-rf.bin"
+   },
+   {
+    "id": "wref-spk-b-11",
+    "channel": 1,
+    "tStartMs": 16999.4,
+    "tEndMs": 17000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-11.bin"
+   },
+   {
+    "id": "wref-spk-b-12",
+    "channel": 1,
+    "tStartMs": 18499.4,
+    "tEndMs": 18500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-12.bin"
+   },
+   {
+    "id": "wref-spk-b-13",
+    "channel": 1,
+    "tStartMs": 19999.4,
+    "tEndMs": 20000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-13.bin"
+   },
+   {
+    "id": "wref-spk-b-14",
+    "channel": 1,
+    "tStartMs": 21499.4,
+    "tEndMs": 21500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-14.bin"
+   },
+   {
+    "id": "wref-spk-b-15",
+    "channel": 1,
+    "tStartMs": 22999.4,
+    "tEndMs": 23000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-15.bin"
+   },
+   {
+    "id": "wref-spk-b-16",
+    "channel": 1,
+    "tStartMs": 24499.4,
+    "tEndMs": 24500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-16.bin"
+   },
+   {
+    "id": "wref-spk-b-17",
+    "channel": 1,
+    "tStartMs": 25999.4,
+    "tEndMs": 26000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-17.bin"
+   },
+   {
+    "id": "wref-spk-b-18",
+    "channel": 1,
+    "tStartMs": 27499.4,
+    "tEndMs": 27500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-18.bin"
+   },
+   {
+    "id": "wref-spk-b-19",
+    "channel": 1,
+    "tStartMs": 28999.4,
+    "tEndMs": 29000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-19.bin"
+   },
+   {
+    "id": "wref-spk-b-20",
+    "channel": 1,
+    "tStartMs": 30499.4,
+    "tEndMs": 30500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-20.bin"
+   },
+   {
+    "id": "wref-spk-b-21",
+    "channel": 1,
+    "tStartMs": 31999.4,
+    "tEndMs": 32000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-21.bin"
+   },
+   {
+    "id": "wref-spk-b-22",
+    "channel": 1,
+    "tStartMs": 33499.4,
+    "tEndMs": 33500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-22.bin"
+   },
+   {
+    "id": "wref-spk-b-23",
+    "channel": 1,
+    "tStartMs": 34999.4,
+    "tEndMs": 35000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-23.bin"
+   },
+   {
+    "id": "wref-spk-b-24",
+    "channel": 1,
+    "tStartMs": 36499.4,
+    "tEndMs": 36500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-24.bin"
+   },
+   {
+    "id": "wref-spk-b-25",
+    "channel": 1,
+    "tStartMs": 37999.4,
+    "tEndMs": 38000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-25.bin"
+   },
+   {
+    "id": "wref-spk-b-26",
+    "channel": 1,
+    "tStartMs": 39499.4,
+    "tEndMs": 39500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-26.bin"
+   },
+   {
+    "id": "wref-spk-b-27",
+    "channel": 1,
+    "tStartMs": 40999.4,
+    "tEndMs": 41000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-27.bin"
+   },
+   {
+    "id": "wref-spk-b-28",
+    "channel": 1,
+    "tStartMs": 42499.4,
+    "tEndMs": 42500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-28.bin"
+   },
+   {
+    "id": "wref-spk-b-29",
+    "channel": 1,
+    "tStartMs": 43999.4,
+    "tEndMs": 44000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-29.bin"
+   },
+   {
+    "id": "wref-spk-b-30",
+    "channel": 1,
+    "tStartMs": 45499.4,
+    "tEndMs": 45500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-30.bin"
+   },
+   {
+    "id": "wref-spk-b-31",
+    "channel": 1,
+    "tStartMs": 46999.4,
+    "tEndMs": 47000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-31.bin"
+   },
+   {
+    "id": "wref-spk-b-32",
+    "channel": 1,
+    "tStartMs": 48499.4,
+    "tEndMs": 48500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-32.bin"
+   },
+   {
+    "id": "wref-spk-b-33",
+    "channel": 1,
+    "tStartMs": 49999.4,
+    "tEndMs": 50000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-33.bin"
+   },
+   {
+    "id": "wref-spk-b-34",
+    "channel": 1,
+    "tStartMs": 51499.4,
+    "tEndMs": 51500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-34.bin"
+   },
+   {
+    "id": "wref-spk-b-35",
+    "channel": 1,
+    "tStartMs": 52999.4,
+    "tEndMs": 53000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-35.bin"
+   },
+   {
+    "id": "wref-spk-b-36",
+    "channel": 1,
+    "tStartMs": 54499.4,
+    "tEndMs": 54500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-36.bin"
+   },
+   {
+    "id": "wref-spk-b-37",
+    "channel": 1,
+    "tStartMs": 55999.4,
+    "tEndMs": 56000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-37.bin"
+   },
+   {
+    "id": "wref-spk-b-38",
+    "channel": 1,
+    "tStartMs": 57499.4,
+    "tEndMs": 57500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-38.bin"
+   },
+   {
+    "id": "wref-spk-b-39",
+    "channel": 1,
+    "tStartMs": 58999.4,
+    "tEndMs": 59000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-b-39.bin"
+   },
+   {
+    "id": "wref-spk-conc-a",
+    "channel": 0,
+    "tStartMs": 9999.4,
+    "tEndMs": 10000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-conc-a.bin"
+   },
+   {
+    "id": "wref-spk-conc-b",
+    "channel": 1,
+    "tStartMs": 9999.7,
+    "tEndMs": 10001.2,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-conc-b.bin"
+   },
+   {
+    "id": "wref-spk-edge-start",
+    "channel": 2,
+    "tStartMs": -0.6,
+    "tEndMs": 0.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-edge-start.bin"
+   },
+   {
+    "id": "wref-spk-edge-in",
+    "channel": 2,
+    "tStartMs": 59999.3,
+    "tEndMs": 60000.8,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-edge-in.bin"
+   },
+   {
+    "id": "wref-spk-edge-end",
+    "channel": 2,
+    "tStartMs": 59999.4,
+    "tEndMs": 60000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-edge-end.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-0",
+    "channel": 2,
+    "tStartMs": 4999.4,
+    "tEndMs": 5000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-0.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-1",
+    "channel": 2,
+    "tStartMs": 7999.4,
+    "tEndMs": 8000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-1.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-2",
+    "channel": 2,
+    "tStartMs": 10999.4,
+    "tEndMs": 11000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-2.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-3",
+    "channel": 2,
+    "tStartMs": 13999.4,
+    "tEndMs": 14000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-3.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-4",
+    "channel": 2,
+    "tStartMs": 16999.4,
+    "tEndMs": 17000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-4.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-5",
+    "channel": 2,
+    "tStartMs": 19999.4,
+    "tEndMs": 20000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-5.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-6",
+    "channel": 2,
+    "tStartMs": 22999.4,
+    "tEndMs": 23000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-6.bin"
+   },
+   {
+    "id": "wref-spk-c-lo-7",
+    "channel": 2,
+    "tStartMs": 25999.4,
+    "tEndMs": 26000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-lo-7.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-0",
+    "channel": 3,
+    "tStartMs": 6499.4,
+    "tEndMs": 6500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-0.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-1",
+    "channel": 3,
+    "tStartMs": 9499.4,
+    "tEndMs": 9500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-1.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-2",
+    "channel": 3,
+    "tStartMs": 12499.4,
+    "tEndMs": 12500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-2.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-3",
+    "channel": 3,
+    "tStartMs": 15499.4,
+    "tEndMs": 15500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-3.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-4",
+    "channel": 3,
+    "tStartMs": 18499.4,
+    "tEndMs": 18500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-4.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-5",
+    "channel": 3,
+    "tStartMs": 21499.4,
+    "tEndMs": 21500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-5.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-6",
+    "channel": 3,
+    "tStartMs": 24499.4,
+    "tEndMs": 24500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-6.bin"
+   },
+   {
+    "id": "wref-spk-c-hi-7",
+    "channel": 3,
+    "tStartMs": 27499.4,
+    "tEndMs": 27500.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-hi-7.bin"
+   },
+   {
+    "id": "wref-spk-c-shared-0",
+    "channel": 2,
+    "tStartMs": 19999.4,
+    "tEndMs": 20000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-shared-0.bin"
+   },
+   {
+    "id": "wref-spk-c-shared-1",
+    "channel": 3,
+    "tStartMs": 31999.4,
+    "tEndMs": 32000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-c-shared-1.bin"
+   },
+   {
+    "id": "wref-spk-bad-amp",
+    "channel": 1,
+    "tStartMs": 29999.4,
+    "tEndMs": 30000.9,
+    "samplingRateHz": 30000.0,
+    "amplitudeUnit": "uV",
+    "coordFrame": "probe_um",
+    "sourceUri": "local://recording-07/snippets/spk-bad-amp.bin"
+   }
+  ],
+  "spikes": [
+   {
+    "id": "spk-a-00",
+    "timeMs": 5010.0,
+    "channel": 0,
+    "amplitude": "180.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-00",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-01",
+    "timeMs": 7010.0,
+    "channel": 0,
+    "amplitude": "177.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-01",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-02",
+    "timeMs": 9010.0,
+    "channel": 0,
+    "amplitude": "175.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-02",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-03",
+    "timeMs": 11010.0,
+    "channel": 0,
+    "amplitude": "172.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-03",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-04",
+    "timeMs": 13010.0,
+    "channel": 0,
+    "amplitude": "170.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-04",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-05",
+    "timeMs": 15010.0,
+    "channel": 0,
+    "amplitude": "167.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-05",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-06",
+    "timeMs": 17010.0,
+    "channel": 0,
+    "amplitude": "165.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-06",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-07",
+    "timeMs": 19010.0,
+    "channel": 0,
+    "amplitude": "162.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-07",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-08",
+    "timeMs": 21010.0,
+    "channel": 0,
+    "amplitude": "160.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-08",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-09",
+    "timeMs": 23010.0,
+    "channel": 0,
+    "amplitude": "157.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-09",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-10",
+    "timeMs": 25010.0,
+    "channel": 0,
+    "amplitude": "155.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-10",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-11",
+    "timeMs": 27010.0,
+    "channel": 0,
+    "amplitude": "152.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-11",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-12",
+    "timeMs": 29010.0,
+    "channel": 0,
+    "amplitude": "150.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-12",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-13",
+    "timeMs": 31010.0,
+    "channel": 0,
+    "amplitude": "147.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-13",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-14",
+    "timeMs": 33010.0,
+    "channel": 0,
+    "amplitude": "145.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-14",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-15",
+    "timeMs": 35010.0,
+    "channel": 0,
+    "amplitude": "142.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-15",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-16",
+    "timeMs": 37010.0,
+    "channel": 0,
+    "amplitude": "140.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-16",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-17",
+    "timeMs": 39010.0,
+    "channel": 0,
+    "amplitude": "137.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-17",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-18",
+    "timeMs": 41010.0,
+    "channel": 0,
+    "amplitude": "135.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-18",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-19",
+    "timeMs": 43010.0,
+    "channel": 0,
+    "amplitude": "132.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-19",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-20",
+    "timeMs": 45010.0,
+    "channel": 0,
+    "amplitude": "130.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-20",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-21",
+    "timeMs": 47010.0,
+    "channel": 0,
+    "amplitude": "127.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-21",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-22",
+    "timeMs": 49010.0,
+    "channel": 0,
+    "amplitude": "125.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-22",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-23",
+    "timeMs": 51010.0,
+    "channel": 0,
+    "amplitude": "122.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-23",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-a-24",
+    "timeMs": 53010.0,
+    "channel": 0,
+    "amplitude": "120.0 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-a-24",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-b-00",
+    "timeMs": 500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-00",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-01",
+    "timeMs": 2000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-01",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-02",
+    "timeMs": 3500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-02",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-03",
+    "timeMs": 5000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-03",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-04",
+    "timeMs": 6500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-04",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-05",
+    "timeMs": 8000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-05",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-06",
+    "timeMs": 9500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-06",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-07",
+    "timeMs": 11000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-07",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-08",
+    "timeMs": 12500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-08",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-09",
+    "timeMs": 14000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-09",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-10",
+    "timeMs": 15500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-10",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-10-rf",
+    "timeMs": 15500.4,
+    "channel": 1,
+    "amplitude": "91.0 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-10-rf",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-11",
+    "timeMs": 17000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-11",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-12",
+    "timeMs": 18500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-12",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-13",
+    "timeMs": 20000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-13",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-14",
+    "timeMs": 21500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-14",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-15",
+    "timeMs": 23000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-15",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-16",
+    "timeMs": 24500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-16",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-17",
+    "timeMs": 26000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-17",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-18",
+    "timeMs": 27500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-18",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-19",
+    "timeMs": 29000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-19",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-20",
+    "timeMs": 30500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-20",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-21",
+    "timeMs": 32000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-21",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-22",
+    "timeMs": 33500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-22",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-23",
+    "timeMs": 35000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-23",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-24",
+    "timeMs": 36500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-24",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-25",
+    "timeMs": 38000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-25",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-26",
+    "timeMs": 39500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-26",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-27",
+    "timeMs": 41000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-27",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-28",
+    "timeMs": 42500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-28",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-29",
+    "timeMs": 44000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-29",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-30",
+    "timeMs": 45500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-30",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-31",
+    "timeMs": 47000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-31",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-32",
+    "timeMs": 48500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-32",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-33",
+    "timeMs": 50000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-33",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-34",
+    "timeMs": 51500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-34",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-35",
+    "timeMs": 53000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-35",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-36",
+    "timeMs": 54500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-36",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-37",
+    "timeMs": 56000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-37",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-38",
+    "timeMs": 57500.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-38",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-b-39",
+    "timeMs": 59000.0,
+    "channel": 1,
+    "amplitude": "95.2 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-b-39",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-conc-a",
+    "timeMs": 10000.0,
+    "channel": 0,
+    "amplitude": "172.5 µV",
+    "unitId": "unit-A",
+    "waveformRefId": "wref-spk-conc-a",
+    "candidateUnitIds": [
+     "unit-A"
+    ]
+   },
+   {
+    "id": "spk-conc-b",
+    "timeMs": 10000.3,
+    "channel": 1,
+    "amplitude": "96.1 µV",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-conc-b",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   },
+   {
+    "id": "spk-edge-start",
+    "timeMs": 0.0,
+    "channel": 2,
+    "amplitude": "0.15 mV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-edge-start",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-edge-in",
+    "timeMs": 59999.9,
+    "channel": 2,
+    "amplitude": "88.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-edge-in",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-edge-end",
+    "timeMs": 60000.0,
+    "channel": 2,
+    "amplitude": "87.5 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-edge-end",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-0",
+    "timeMs": 5000.0,
+    "channel": 2,
+    "amplitude": "60.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-0",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-1",
+    "timeMs": 8000.0,
+    "channel": 2,
+    "amplitude": "60.5 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-1",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-2",
+    "timeMs": 11000.0,
+    "channel": 2,
+    "amplitude": "61.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-2",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-3",
+    "timeMs": 14000.0,
+    "channel": 2,
+    "amplitude": "61.5 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-3",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-4",
+    "timeMs": 17000.0,
+    "channel": 2,
+    "amplitude": "62.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-4",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-5",
+    "timeMs": 20000.0,
+    "channel": 2,
+    "amplitude": "62.5 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-5",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-6",
+    "timeMs": 23000.0,
+    "channel": 2,
+    "amplitude": "63.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-6",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-lo-7",
+    "timeMs": 26000.0,
+    "channel": 2,
+    "amplitude": "63.5 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-lo-7",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-0",
+    "timeMs": 6500.0,
+    "channel": 3,
+    "amplitude": "110.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-0",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-1",
+    "timeMs": 9500.0,
+    "channel": 3,
+    "amplitude": "109.6 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-1",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-2",
+    "timeMs": 12500.0,
+    "channel": 3,
+    "amplitude": "109.2 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-2",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-3",
+    "timeMs": 15500.0,
+    "channel": 3,
+    "amplitude": "108.8 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-3",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-4",
+    "timeMs": 18500.0,
+    "channel": 3,
+    "amplitude": "108.4 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-4",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-5",
+    "timeMs": 21500.0,
+    "channel": 3,
+    "amplitude": "108.0 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-5",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-6",
+    "timeMs": 24500.0,
+    "channel": 3,
+    "amplitude": "107.6 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-6",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-hi-7",
+    "timeMs": 27500.0,
+    "channel": 3,
+    "amplitude": "107.2 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-hi-7",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-shared-0",
+    "timeMs": 20000.0,
+    "channel": 2,
+    "amplitude": "84.6 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-shared-0",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-c-shared-1",
+    "timeMs": 32000.0,
+    "channel": 3,
+    "amplitude": "86.2 µV",
+    "unitId": "unit-C",
+    "waveformRefId": "wref-spk-c-shared-1",
+    "candidateUnitIds": [
+     "unit-C"
+    ]
+   },
+   {
+    "id": "spk-bad-amp",
+    "timeMs": 30000.0,
+    "channel": 1,
+    "amplitude": "n/a",
+    "unitId": "unit-B",
+    "waveformRefId": "wref-spk-bad-amp",
+    "candidateUnitIds": [
+     "unit-B"
+    ]
+   }
+  ]
+ },
+ "script": [
+  {
+   "op": "decide",
+   "type": "PARAM_REVISION",
+   "payload": {
+    "thresholdUv": 55.0,
+    "refractoryMs": 1.5,
+    "rationale": "reviewer lowered threshold after noise audit"
+   }
+  },
+  {
+   "op": "decide",
+   "type": "SOURCE_CHANGE",
+   "payload": {
+    "scope": "local",
+    "spikeUpdates": [
+     {
+      "id": "spk-a-05",
+      "amplitude": "166.9 µV"
+     }
+    ],
+    "rationale": "re-read snippet from source file; only unit-A artifacts must recompute"
+   }
+  },
+  {
+   "op": "decide",
+   "type": "WINDOW_CHANGE",
+   "payload": {
+    "windowStartMs": 5000.0,
+    "windowEndMs": 55000.0,
+    "rationale": "exclude noisy edges; only intersecting clusters recompute"
+   }
+  },
+  {
+   "op": "decide",
+   "type": "RENUMBER",
+   "payload": {
+    "featureSetId": "feat-v1",
+    "mapping": {
+     "2": 7
+    },
+    "rationale": "sorter renumbered cluster 2 -> 7; unit identity unchanged"
+   }
+  },
+  {
+   "op": "decide",
+   "type": "SPLIT",
+   "payload": {
+    "unitId": "unit-C",
+    "intoUnitIds": [
+     "unit-C1",
+     "unit-C2"
+    ],
+    "sharedSpikeIds": [
+     "spk-c-shared-0",
+     "spk-c-shared-1"
+    ],
+    "assignments": {
+     "spk-c-lo-0": "unit-C1",
+     "spk-c-hi-0": "unit-C2",
+     "spk-c-lo-1": "unit-C1",
+     "spk-c-hi-1": "unit-C2",
+     "spk-c-lo-2": "unit-C1",
+     "spk-c-hi-2": "unit-C2",
+     "spk-c-lo-3": "unit-C1",
+     "spk-c-hi-3": "unit-C2",
+     "spk-c-lo-4": "unit-C1",
+     "spk-c-hi-4": "unit-C2",
+     "spk-c-lo-5": "unit-C1",
+     "spk-c-hi-5": "unit-C2",
+     "spk-c-lo-6": "unit-C1",
+     "spk-c-hi-6": "unit-C2",
+     "spk-c-lo-7": "unit-C1",
+     "spk-c-hi-7": "unit-C2",
+     "spk-edge-start": "unit-C1",
+     "spk-edge-in": "unit-C2",
+     "spk-edge-end": "unit-C2"
+    },
+    "rationale": "bimodal amplitudes; shared spikes keep all legal candidates"
+   }
+  },
+  {
+   "op": "decide",
+   "type": "ACCEPT",
+   "payload": {
+    "unitId": "unit-A",
+    "conflictKey": "unit-A-drift-verdict",
+    "verdict": "accept-drift-as-same-unit",
+    "rationale": "reviewer 1: drift is evidence, identity holds"
+   }
+  },
+  {
+   "op": "decide",
+   "type": "REJECT",
+   "payload": {
+    "unitId": "unit-A",
+    "conflictKey": "unit-A-drift-verdict",
+    "verdict": "reject-drift-split-required",
+    "rationale": "reviewer 2: drift too large, demands split — conflicts with reviewer 1"
+   }
+  }
+ ]
+}
