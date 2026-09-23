@@ -1,0 +1,8 @@
+# decisionId|seq|type|actor|atEvent|basisRuleId|parentClusterId|adopted|payload
+dec1|1|ACCEPT|reviewer-li||rule:identityMatch|clu_v1|{"note":"accept baseline clustering","clusterId":"clu_v1","adopted":"ADOPTED"}
+dec2|2|PARAMETER_REVISION|reviewer-li||rule:window|clu_v1|{"reason":"reduce low-amplitude noise on channel 8","featureVersion":"fv1->fv2","thresholdChannel8":"4.0 sigma->5.0 sigma","adopted":"ADOPTED"}
+dec3|3|SPLIT|reviewer-wang||rule:identityMatch|clu_v2|{"sharedEvents":"retain all legal owners","intoUnits":["u_c1","u_c2"],"fromUnit":"u_c","adopted":"ADOPTED"}
+dec4|4|MERGE|reviewer-li||rule:evidence|clu_v2|{"units":["u_a","u_b"],"claim":"concurrent spikes + propagation suggest one unit","adopted":"ADOPTED"}
+dec5|5|REJECT_MERGE|reviewer-zhao|4000|rule:evidence|clu_v2|{"reason":"refractory/amplitude/propagation are evidence only; labels and timing separate A and B","contradicts":"dec4","adopted":"REJECTED"}
+dec6|6|WINDOW_CHANGE|reviewer-zhao||rule:window|clu_v2|{"recompute":"intersecting clusters only","windowEnd":"4000 ms!","windowStart":"1000 ms","adopted":"ADOPTED"}
+dec7|7|LOCAL_SOURCE_CHANGE|pipeline||rule:locality|clu_v2|{"scope":"only units intersecting channel 5","change":"channel 5 threshold retained, geometry y stays unconvertible","directSource":"thr_v2_5","adopted":"ADOPTED"}

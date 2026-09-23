@@ -1,0 +1,29 @@
+[ {
+  "id" : "S1_CONCURRENT_SPIKES",
+  "setup" : "two channels detect spikes at the same timestamp; both detections survive",
+  "judgment" : "concurrent spikes are not merged just for being simultaneous"
+}, {
+  "id" : "S2_AMPLITUDE_DRIFT",
+  "setup" : "unit A amplitude drops below 0.85 ratio after 4000 ms",
+  "judgment" : "drift recorded as evidence; stable unit identity retained"
+}, {
+  "id" : "S3_CLUSTER_RENUMBERING",
+  "setup" : "v2 permutes numeric labels while stable unit ids persist",
+  "judgment" : "cluster number must not be treated as stable identity"
+}, {
+  "id" : "S4_POST_SPLIT_SHARED_EVENTS",
+  "setup" : "unit C split into C1/C2; borderline events shared by both",
+  "judgment" : "all legal candidates retained when ownership is not unique"
+}, {
+  "id" : "S5_WINDOW_ENDPOINTS",
+  "setup" : "window [1000,4000) includes t=1000 and excludes t=4000; second run [1000,4000]",
+  "judgment" : "only intersecting clusters recomputed; endpoint policy visible"
+}, {
+  "id" : "S6_ADJUDICATION_CONFLICT",
+  "setup" : "a merge is accepted then rejected by a later reviewer decision",
+  "judgment" : "both decisions and both results retained; latest adopted wins"
+}, {
+  "id" : "S7_LOCAL_FAILURE",
+  "setup" : "a single direct source changes; only intersecting downstream objects are invalidated",
+  "judgment" : "failure is contained to the correct scope, never global"
+} ]

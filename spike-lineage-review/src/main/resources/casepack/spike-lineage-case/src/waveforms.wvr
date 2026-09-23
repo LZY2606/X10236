@@ -1,0 +1,2 @@
+# refId|uri|checksum|format|timeOrigin|timeUnit|sampleRateHz|sampleCount|sampleIndex|sampleLength|gain
+wf0|local://recordings/seg0.bin|sha256:casepack0|int16-le|recclock|ms|30000|8144|0|48|0.195 uV/count

@@ -1,0 +1,28 @@
+{
+  "ruleVersion" : "rules-2026-09-01",
+  "refractory" : {
+    "ms" : 1.5,
+    "meaning" : "evidence of contamination or collision; never an identity by itself"
+  },
+  "amplitudeDrift" : {
+    "ratioBelow" : 0.85,
+    "meaning" : "evidence of waveform amplitude drift; never an identity by itself"
+  },
+  "propagation" : {
+    "minChannels" : 2,
+    "meaning" : "simultaneous multi-channel propagation is evidence; cluster number is not identity"
+  },
+  "identityMatch" : {
+    "jaccardMin" : 0.5,
+    "meaning" : "match stable units across versions by event-set overlap, not label"
+  },
+  "window" : {
+    "meaning" : "window change recomputes only intersecting clusters",
+    "right" : "exclusive",
+    "left" : "inclusive"
+  },
+  "conflict" : {
+    "keep" : "both adopted and rejected results retained",
+    "resolution" : "latest_adopted_wins"
+  }
+}

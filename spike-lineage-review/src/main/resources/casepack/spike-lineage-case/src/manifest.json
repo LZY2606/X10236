@@ -1,0 +1,15 @@
+{
+  "casePackId" : "spike-lineage-case",
+  "title" : "脉冲簇谱：神经棘波候选、漂移簇与人工裁定谱系",
+  "titleEn" : "pulse cluster atlas: spike candidates, drift clusters and adjudication lineage",
+  "version" : 1,
+  "recordStart" : "2026-09-01T09:00:00+09:00",
+  "timeOrigin" : "recclock",
+  "sampleRateHz" : 30000,
+  "coordinateFrame" : "probe:wf0",
+  "layers" : [ "waveform", "geometry", "threshold", "feature", "cluster", "decision" ],
+  "budget" : {
+    "maxBytesPerFile" : 16777216,
+    "maxRowsPerFile" : 20000
+  }
+}
