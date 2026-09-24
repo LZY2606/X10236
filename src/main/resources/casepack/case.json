@@ -1,0 +1,16 @@
+{
+ "case_id": "pulse-cluster-spectrum-001",
+ "title": "脉冲簇谱：神经棘波候选、漂移簇与人工裁定谱系",
+ "narrative": "神经电生理团队导入多通道检测事件、波形片段和记录时间，为单元聚类建立可回溯的合并、拆分和漂移证据。",
+ "bases": {
+  "time": "ms since recording start (session 2026-09-19T00:33:12+09:00)",
+  "amplitude": "µV",
+  "geometry": "µm, probe-frame (x=lateral, y=depth)"
+ },
+ "steps": [
+  "v1_base.json",
+  "v2_param_revision.json",
+  "v3_local_source_change.json",
+  "v4_conflicting_decisions.json"
+ ]
+}

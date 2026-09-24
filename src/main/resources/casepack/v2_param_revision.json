@@ -1,0 +1,32 @@
+{
+ "stage": "v2_param_revision",
+ "ops": [
+  {
+   "op": "renumber",
+   "unit_id": "u-alpha",
+   "new_cluster_no": 7,
+   "actor": "reviewer-kim",
+   "note": "聚类编号变化：cluster_no 1→7，unit_id 不变"
+  },
+  {
+   "op": "split",
+   "unit_id": "u-delta",
+   "t_split_ms": 20000.0,
+   "actor": "reviewer-kim",
+   "note": "拆分后共享事件：±0.5ms 内归属不唯一"
+  },
+  {
+   "op": "window_change",
+   "t0_ms": 1000.0,
+   "t1_ms": 40000.0,
+   "actor": "reviewer-kim",
+   "note": "时间窗端点：半开区间 [1000,40000)，只重算相交簇"
+  },
+  {
+   "op": "param_revision",
+   "sigma": 4.5,
+   "actor": "reviewer-lee",
+   "note": "参数修订：检测阈值 4.0σ→4.5σ"
+  }
+ ]
+}

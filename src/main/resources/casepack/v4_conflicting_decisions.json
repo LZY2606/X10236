@@ -1,0 +1,21 @@
+{
+ "stage": "v4_conflicting_decisions",
+ "ops": [
+  {
+   "op": "decide",
+   "subject_kind": "evidence.drift",
+   "unit_id": "u-alpha",
+   "verdict": "accept",
+   "actor": "reviewer-kim",
+   "rationale": "幅度漂移斜率超阈值，支持拆出漂移簇"
+  },
+  {
+   "op": "decide",
+   "subject_kind": "evidence.drift",
+   "unit_id": "u-alpha",
+   "verdict": "reject",
+   "actor": "reviewer-lee",
+   "rationale": "漂移可由探头缓慢移动解释，反对拆分"
+  }
+ ]
+}

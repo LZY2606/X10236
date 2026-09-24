@@ -1,0 +1,622 @@
+{
+ "case_id": "pulse-cluster-spectrum-001",
+ "stage": "v1_base",
+ "materials": [
+  {
+   "id": "pg-tetrode-01",
+   "kind": "probe_geometry",
+   "version": 1,
+   "payload": {
+    "name": "tetrode-4ch",
+    "coord_frame": "probe-frame (x=lateral, y=depth)",
+    "unit": "µm",
+    "sites": [
+     {
+      "channel": 0,
+      "x_um": 0.0,
+      "y_um": 0.0
+     },
+     {
+      "channel": 1,
+      "x_um": 30.0,
+      "y_um": 0.0
+     },
+     {
+      "channel": 2,
+      "x_um": 15.0,
+      "y_um": 26.0
+     },
+     {
+      "channel": 3,
+      "x_um": 45.0,
+      "y_um": 26.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "th-v1",
+   "kind": "detection_threshold",
+   "version": 1,
+   "payload": {
+    "sigma": 4.0,
+    "unit": "σ (noise RMS)",
+    "refractory_ms": 1.5,
+    "coprop_window_ms": 0.05,
+    "shared_margin_ms": 0.5,
+    "drift_slope_threshold_uv_per_ms": 0.0005,
+    "valid_from_ms": 0.0,
+    "valid_to_ms": null
+   }
+  },
+  {
+   "id": "fv-v1",
+   "kind": "feature_version",
+   "version": 1,
+   "payload": {
+    "method": "pca",
+    "dims": [
+     "f1",
+     "f2"
+    ],
+    "normalized_in": "derived_layer"
+   }
+  },
+  {
+   "id": "wr-01",
+   "kind": "waveform_ref",
+   "version": 1,
+   "payload": {
+    "ref_id": "wr-01",
+    "sample_rate_hz": 30000,
+    "unit": "µV",
+    "time_base": "ms since recording start",
+    "samples_uv": [
+     -0.02,
+     -0.39,
+     -3.57,
+     -19.18,
+     -59.92,
+     -108.83,
+     -114.81,
+     -69.73,
+     -21.38,
+     5.36,
+     16.61,
+     16.28,
+     8.99,
+     2.88,
+     0.54,
+     0.06
+    ]
+   }
+  },
+  {
+   "id": "wr-02",
+   "kind": "waveform_ref",
+   "version": 1,
+   "payload": {
+    "ref_id": "wr-02",
+    "sample_rate_hz": 30000,
+    "unit": "µV",
+    "time_base": "ms since recording start",
+    "samples_uv": [
+     -0.02,
+     -0.31,
+     -2.82,
+     -15.18,
+     -47.44,
+     -86.16,
+     -90.89,
+     -55.2,
+     -16.93,
+     4.24,
+     13.15,
+     12.89,
+     7.11,
+     2.28,
+     0.42,
+     0.05
+    ]
+   }
+  },
+  {
+   "id": "wr-03",
+   "kind": "waveform_ref",
+   "version": 1,
+   "payload": {
+    "ref_id": "wr-03",
+    "sample_rate_hz": 30000,
+    "unit": "µV",
+    "time_base": "ms since recording start",
+    "samples_uv": [
+     -0.02,
+     -0.35,
+     -3.27,
+     -17.58,
+     -54.93,
+     -99.76,
+     -105.24,
+     -63.92,
+     -19.6,
+     4.91,
+     15.22,
+     14.92,
+     8.24,
+     2.64,
+     0.49,
+     0.05
+    ]
+   }
+  },
+  {
+   "id": "wr-04",
+   "kind": "waveform_ref",
+   "version": 1,
+   "payload": {
+    "ref_id": "wr-04",
+    "sample_rate_hz": 30000,
+    "unit": "µV",
+    "time_base": "ms since recording start",
+    "samples_uv": [
+     -0.02,
+     -0.26,
+     -2.38,
+     -12.78,
+     -39.95,
+     -72.55,
+     -76.54,
+     -46.49,
+     -14.25,
+     3.57,
+     11.07,
+     10.85,
+     5.99,
+     1.92,
+     0.36,
+     0.04
+    ]
+   }
+  },
+  {
+   "id": "wr-05",
+   "kind": "waveform_ref",
+   "version": 1,
+   "payload": {
+    "ref_id": "wr-05",
+    "sample_rate_hz": 30000,
+    "unit": "µV",
+    "time_base": "ms since recording start",
+    "samples_uv": [
+     -0.01,
+     -0.23,
+     -2.08,
+     -11.19,
+     -34.95,
+     -63.48,
+     -66.97,
+     -40.68,
+     -12.47,
+     3.13,
+     9.69,
+     9.5,
+     5.24,
+     1.68,
+     0.31,
+     0.03
+    ]
+   }
+  },
+  {
+   "id": "cl-u-alpha-v1",
+   "kind": "cluster_label",
+   "version": 1,
+   "payload": {
+    "unit_id": "u-alpha",
+    "cluster_no": 1
+   }
+  },
+  {
+   "id": "cl-u-beta-v1",
+   "kind": "cluster_label",
+   "version": 1,
+   "payload": {
+    "unit_id": "u-beta",
+    "cluster_no": 2
+   }
+  },
+  {
+   "id": "cl-u-gamma-v1",
+   "kind": "cluster_label",
+   "version": 1,
+   "payload": {
+    "unit_id": "u-gamma",
+    "cluster_no": 3
+   }
+  },
+  {
+   "id": "cl-u-delta-v1",
+   "kind": "cluster_label",
+   "version": 1,
+   "payload": {
+    "unit_id": "u-delta",
+    "cluster_no": 4
+   }
+  },
+  {
+   "id": "cl-u-epsilon-v1",
+   "kind": "cluster_label",
+   "version": 1,
+   "payload": {
+    "unit_id": "u-epsilon",
+    "cluster_no": 5
+   }
+  }
+ ],
+ "spikes": [
+  {
+   "unit_id": "u-alpha",
+   "t": "2000 ms",
+   "channel": 0,
+   "amplitude": "120.0 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "3000 ms",
+   "channel": 0,
+   "amplitude": "118.97 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "4000 ms",
+   "channel": 0,
+   "amplitude": "117.93 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "5000 ms",
+   "channel": 0,
+   "amplitude": "116.9 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "6000 ms",
+   "channel": 0,
+   "amplitude": "115.86 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "7000 ms",
+   "channel": 0,
+   "amplitude": "114.83 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "8000 ms",
+   "channel": 0,
+   "amplitude": "113.79 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "9000 ms",
+   "channel": 0,
+   "amplitude": "112.76 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "10000 ms",
+   "channel": 0,
+   "amplitude": "111.72 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "11000 ms",
+   "channel": 0,
+   "amplitude": "110.69 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "12000 ms",
+   "channel": 0,
+   "amplitude": "109.66 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "13000 ms",
+   "channel": 0,
+   "amplitude": "108.62 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "14000 ms",
+   "channel": 0,
+   "amplitude": "107.59 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "15000 ms",
+   "channel": 0,
+   "amplitude": "106.55 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "16000 ms",
+   "channel": 0,
+   "amplitude": "105.52 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "17000 ms",
+   "channel": 0,
+   "amplitude": "104.48 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "18000 ms",
+   "channel": 0,
+   "amplitude": "103.45 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "19000 ms",
+   "channel": 0,
+   "amplitude": "102.41 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "20000 ms",
+   "channel": 0,
+   "amplitude": "101.38 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "21000 ms",
+   "channel": 0,
+   "amplitude": "100.34 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "22000 ms",
+   "channel": 0,
+   "amplitude": "99.31 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "23000 ms",
+   "channel": 0,
+   "amplitude": "98.28 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "24000 ms",
+   "channel": 0,
+   "amplitude": "97.24 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "25000 ms",
+   "channel": 0,
+   "amplitude": "96.21 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "26000 ms",
+   "channel": 0,
+   "amplitude": "95.17 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "27000 ms",
+   "channel": 0,
+   "amplitude": "94.14 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "28000 ms",
+   "channel": 0,
+   "amplitude": "93.1 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "29000 ms",
+   "channel": 0,
+   "amplitude": "92.07 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "30000 ms",
+   "channel": 0,
+   "amplitude": "91.03 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-alpha",
+   "t": "31000 ms",
+   "channel": 0,
+   "amplitude": "90.0 uV",
+   "waveform_ref_id": "wr-01"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "5000.0 ms",
+   "channel": 1,
+   "amplitude": "95.0 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "9000 ms",
+   "channel": 1,
+   "amplitude": "94.0 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "15000 ms",
+   "channel": 1,
+   "amplitude": "96.0 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "15000.8 ms",
+   "channel": 1,
+   "amplitude": "93.0 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "25000 ms",
+   "channel": 1,
+   "amplitude": "95.5 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "35000 ms",
+   "channel": 1,
+   "amplitude": "94.5 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-gamma",
+   "t": "5000.03 ms",
+   "channel": 2,
+   "amplitude": "110.0 uV",
+   "waveform_ref_id": "wr-03"
+  },
+  {
+   "unit_id": "u-gamma",
+   "t": "12000 ms",
+   "channel": 2,
+   "amplitude": "108.0 uV",
+   "waveform_ref_id": "wr-03"
+  },
+  {
+   "unit_id": "u-gamma",
+   "t": "22000 ms",
+   "channel": 2,
+   "amplitude": "111.0 uV",
+   "waveform_ref_id": "wr-03"
+  },
+  {
+   "unit_id": "u-gamma",
+   "t": "32000 ms",
+   "channel": 2,
+   "amplitude": "109.0 uV",
+   "waveform_ref_id": "wr-03"
+  },
+  {
+   "unit_id": "u-delta",
+   "t": "18000 ms",
+   "channel": 3,
+   "amplitude": "80.0 uV",
+   "waveform_ref_id": "wr-04"
+  },
+  {
+   "unit_id": "u-delta",
+   "t": "19000 ms",
+   "channel": 3,
+   "amplitude": "81.0 uV",
+   "waveform_ref_id": "wr-04"
+  },
+  {
+   "unit_id": "u-delta",
+   "t": "19999.7 ms",
+   "channel": 3,
+   "amplitude": "79.5 uV",
+   "waveform_ref_id": "wr-04"
+  },
+  {
+   "unit_id": "u-delta",
+   "t": "20000.2 ms",
+   "channel": 3,
+   "amplitude": "80.5 uV",
+   "waveform_ref_id": "wr-04"
+  },
+  {
+   "unit_id": "u-delta",
+   "t": "21000 ms",
+   "channel": 3,
+   "amplitude": "79.0 uV",
+   "waveform_ref_id": "wr-04"
+  },
+  {
+   "unit_id": "u-delta",
+   "t": "22000 ms",
+   "channel": 3,
+   "amplitude": "81.5 uV",
+   "waveform_ref_id": "wr-04"
+  },
+  {
+   "unit_id": "u-epsilon",
+   "t": "1000 ms",
+   "channel": 0,
+   "amplitude": "70.0 uV",
+   "waveform_ref_id": "wr-05"
+  },
+  {
+   "unit_id": "u-epsilon",
+   "t": "5000 ms",
+   "channel": 0,
+   "amplitude": "71.0 uV",
+   "waveform_ref_id": "wr-05"
+  },
+  {
+   "unit_id": "u-epsilon",
+   "t": "40000 ms",
+   "channel": 0,
+   "amplitude": "69.0 uV",
+   "waveform_ref_id": "wr-05"
+  },
+  {
+   "unit_id": "u-epsilon",
+   "t": "45000 ms",
+   "channel": 0,
+   "amplitude": "70.5 uV",
+   "waveform_ref_id": "wr-05"
+  },
+  {
+   "unit_id": "u-beta",
+   "t": "N/A",
+   "channel": 1,
+   "amplitude": "90 uV",
+   "waveform_ref_id": "wr-02"
+  },
+  {
+   "unit_id": "u-gamma",
+   "t": "6000 ms",
+   "channel": 2,
+   "amplitude": "0.112 mV",
+   "waveform_ref_id": "wr-03"
+  }
+ ]
+}

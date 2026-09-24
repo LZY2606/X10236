@@ -1,0 +1,25 @@
+{
+ "stage": "v3_local_source_change",
+ "ops": [
+  {
+   "op": "amend_waveform_ref",
+   "waveform_ref_id": "wr-02",
+   "actor": "reviewer-lee",
+   "reason": "重新检测发现 u-beta 漏检 2 个棘波（只影响局部依赖）",
+   "adds_spikes": [
+    {
+     "unit_id": "u-beta",
+     "t": "17500 ms",
+     "channel": 1,
+     "amplitude": "92 uV"
+    },
+    {
+     "unit_id": "u-beta",
+     "t": "27500 ms",
+     "channel": 1,
+     "amplitude": "93.5 uV"
+    }
+   ]
+  }
+ ]
+}
