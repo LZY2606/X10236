@@ -1,0 +1,875 @@
+{
+  "packId" : "spike-dossier-v1",
+  "title" : "Spike-train dossier: neural spike candidates, drift clusters and the human adjudication lineage",
+  "schemaVersion" : "casepack-1.0",
+  "recording" : {
+    "id" : "rec_001",
+    "startWallClockUtc" : "2026-09-20T08:00:00Z",
+    "sampleRate" : "30000 Hz",
+    "duration" : "10.0 s"
+  },
+  "probe" : {
+    "id" : "probe_tetrode_a",
+    "type" : "tetrode-4x25um",
+    "coordinateFrame" : "probe-origin-metres",
+    "sites" : [ {
+      "id" : "site_0",
+      "channel" : 0,
+      "x" : "0 µm",
+      "y" : "0 µm",
+      "z" : "0 µm"
+    }, {
+      "id" : "site_1",
+      "channel" : 1,
+      "x" : "25 µm",
+      "y" : "0 µm",
+      "z" : "0 µm"
+    }, {
+      "id" : "site_2",
+      "channel" : 2,
+      "x" : "0 µm",
+      "y" : "25 µm",
+      "z" : "0 µm"
+    }, {
+      "id" : "site_3",
+      "channel" : 3,
+      "x" : "25 µm",
+      "y" : "25 µm",
+      "z" : "0 µm"
+    } ]
+  },
+  "thresholds" : [ {
+    "detectionRunId" : "det_run_v1",
+    "parameterVersion" : "params-detection-1",
+    "channel" : 0,
+    "value" : "-4.5 σ",
+    "basis" : "robust MAD std"
+  }, {
+    "detectionRunId" : "det_run_v1",
+    "parameterVersion" : "params-detection-1",
+    "channel" : 1,
+    "value" : "-4.5 σ",
+    "basis" : "robust MAD std"
+  }, {
+    "detectionRunId" : "det_run_v1",
+    "parameterVersion" : "params-detection-1",
+    "channel" : 2,
+    "value" : "-4.5 σ",
+    "basis" : "robust MAD std"
+  }, {
+    "detectionRunId" : "det_run_v1",
+    "parameterVersion" : "params-detection-1",
+    "channel" : 3,
+    "value" : "-138 µV??",
+    "basis" : "manual override, unit garbled"
+  } ],
+  "waveformSources" : [ {
+    "id" : "wav_ref_001",
+    "kind" : "bandpass-filtered-recording",
+    "uri" : "offline://casepack/spike-dossier-v1/rec_001.bin",
+    "encoding" : "int16-le-30kHz-4ch",
+    "amplitudeUnit" : "µV",
+    "timeUnit" : "ms",
+    "samplesPerSnippet" : 32,
+    "sampleRate" : "30000 Hz"
+  } ],
+  "spikes" : [ {
+    "id" : "spk_a0",
+    "channel" : 0,
+    "time" : "0.3000 s",
+    "amplitudeRaw" : -150.0,
+    "amplitude" : "-150.0000 µV",
+    "snippet" : [ -28.1, -37.91, -57.38, -73.8, -97.83, -115.17, -135.33, -143.69, -150.55, -143.14, -134.23, -119.57, -95.63, -77.1, -54.08, -40.11, -23.7, -16.91, -7.13, -5.75, 0.0, -1.37, -3.4, 0.26, -2.32, 1.05, -1.67, 1.64, -1.1, 2.2, -0.55, 2.75 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a1",
+    "channel" : 0,
+    "time" : "0.8100 s",
+    "amplitudeRaw" : -146.0,
+    "amplitude" : "-146.0000 µV",
+    "snippet" : [ -23.15, -39.01, -52.43, -74.9, -98.93, -116.27, -136.43, -144.79, -151.65, -144.24, -135.33, -114.62, -96.73, -72.15, -55.18, -41.21, -24.8, -18.01, -8.23, -6.85, -1.1, -2.47, 1.55, -0.84, 2.63, -0.05, -2.77, 0.54, -2.2, 1.1, -1.65, 1.65 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a2",
+    "channel" : 0,
+    "time" : "1.4200 s",
+    "amplitudeRaw" : -142.0,
+    "amplitude" : "-142.0000 µV",
+    "snippet" : [ -24.25, -40.11, -53.53, -76.0, -93.98, -117.37, -131.48, -145.89, -152.75, -145.34, -136.43, -115.72, -97.83, -73.25, -56.28, -36.26, -25.9, -13.06, -9.33, -7.95, -2.2, -3.57, 0.45, -1.94, 1.53, -1.15, 2.18, -0.56, 2.75, 0.0, -2.75, 0.55 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a3",
+    "channel" : 0,
+    "time" : "1.9500 s",
+    "amplitudeRaw" : -150.0,
+    "amplitude" : "-150.0000 µV",
+    "snippet" : [ -25.35, -41.21, -54.63, -77.1, -95.08, -118.47, -132.58, -146.99, -147.8, -146.44, -131.48, -116.82, -98.93, -74.35, -57.38, -37.36, -27.0, -14.16, -10.43, -3.0, -3.3, 1.38, -0.65, -3.04, 0.43, -2.25, 1.08, -1.66, 1.65, -1.1, 2.2, -0.55 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a4",
+    "channel" : 0,
+    "time" : "2.5000 s",
+    "amplitudeRaw" : -146.0,
+    "amplitude" : "-146.0000 µV",
+    "snippet" : [ -26.45, -36.26, -55.73, -72.15, -96.18, -119.57, -133.68, -148.09, -148.9, -147.54, -132.58, -117.92, -93.98, -75.45, -52.43, -38.46, -28.1, -15.26, -11.53, -4.1, -4.4, 0.28, -1.75, 1.91, -0.67, 2.7, -0.02, -2.76, 0.55, -2.2, 1.1, -1.65 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a5",
+    "channel" : 0,
+    "time" : "3.0500 s",
+    "amplitudeRaw" : -142.0,
+    "amplitude" : "-142.0000 µV",
+    "snippet" : [ -27.55, -37.36, -56.83, -73.25, -97.28, -114.62, -134.78, -143.14, -150.0, -148.64, -133.68, -119.02, -95.08, -76.55, -53.53, -39.56, -23.15, -16.36, -6.58, -5.2, -5.5, -0.82, -2.85, 0.81, -1.77, 1.6, -1.12, 2.19, -0.55, 2.75, 0.0, -2.75 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a6",
+    "channel" : 0,
+    "time" : "3.6000 s",
+    "amplitudeRaw" : -150.0,
+    "amplitude" : "-150.0000 µV",
+    "snippet" : [ -22.6, -38.46, -57.93, -74.35, -98.38, -115.72, -135.88, -144.24, -151.1, -143.69, -134.78, -114.07, -96.18, -77.65, -54.63, -40.66, -24.25, -17.46, -7.68, -6.3, -0.55, -1.92, 2.1, -0.29, -2.87, 0.5, -2.22, 1.09, -1.65, 1.65, -1.1, 2.2 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a7",
+    "channel" : 0,
+    "time" : "4.1100 s",
+    "amplitudeRaw" : -146.0,
+    "amplitude" : "-146.0000 µV",
+    "snippet" : [ -23.7, -39.56, -52.98, -75.45, -93.43, -116.82, -136.98, -145.34, -152.2, -144.79, -135.88, -115.17, -97.28, -72.7, -55.73, -35.71, -25.35, -18.56, -8.78, -7.4, -1.65, -3.02, 1.0, -1.39, 2.08, -0.6, 2.73, -0.01, -2.75, 0.55, -2.2, 1.1 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a8",
+    "channel" : 0,
+    "time" : "4.6200 s",
+    "amplitudeRaw" : -142.0,
+    "amplitude" : "-142.0000 µV",
+    "snippet" : [ -24.8, -40.66, -54.08, -76.55, -94.53, -117.92, -132.03, -146.44, -147.25, -145.89, -136.98, -116.27, -98.38, -73.8, -56.83, -36.81, -26.45, -13.61, -9.88, -2.45, -2.75, -4.12, -0.1, -2.49, 0.98, -1.7, 1.63, -1.11, 2.2, -0.55, 2.75, 0.0 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a9",
+    "channel" : 0,
+    "time" : "4.8800 s",
+    "amplitudeRaw" : -150.0,
+    "amplitude" : "-150.0000 µV",
+    "snippet" : [ -25.9, -35.71, -55.18, -77.65, -95.63, -119.02, -133.13, -147.54, -148.35, -146.99, -132.03, -117.37, -93.43, -74.9, -57.93, -37.91, -27.55, -14.71, -10.98, -3.55, -3.85, 0.83, -1.2, 2.46, -0.12, -2.8, 0.53, -2.21, 1.1, -1.65, 1.65, -1.1 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a10",
+    "channel" : 0,
+    "time" : "4.9600 s",
+    "amplitudeRaw" : -146.0,
+    "amplitude" : "-146.0000 µV",
+    "snippet" : [ -27.0, -36.81, -56.28, -72.7, -96.73, -114.07, -134.23, -148.64, -149.45, -148.09, -133.13, -118.47, -94.53, -76.0, -52.98, -39.01, -22.6, -15.81, -12.08, -4.65, -4.95, -0.27, -2.3, 1.36, -1.22, 2.15, -0.57, 2.74, 0.0, -2.75, 0.55, -2.2 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_a_endpoint",
+    "channel" : 0,
+    "time" : "5.0000 s",
+    "amplitudeRaw" : -142.0,
+    "amplitude" : "-142.0000 µV",
+    "snippet" : [ -28.1, -37.91, -57.38, -73.8, -97.83, -115.17, -135.33, -143.69, -150.55, -143.14, -134.23, -119.57, -95.63, -77.1, -54.08, -40.11, -23.7, -16.91, -7.13, -5.75, 0.0, -1.37, -3.4, 0.26, -2.32, 1.05, -1.67, 1.64, -1.1, 2.2, -0.55, 2.75 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : "endpoint-exactly-5.000s"
+  }, {
+    "id" : "spk_b0",
+    "channel" : 1,
+    "time" : "0.4500 s",
+    "amplitudeRaw" : -120.0,
+    "amplitude" : "-120.0000 µV",
+    "snippet" : [ -19.73, -32.97, -43.05, -61.57, -75.29, -94.56, -105.18, -117.26, -117.25, -116.71, -110.13, -92.91, -79.14, -58.82, -45.8, -29.12, -21.38, -10.45, -8.01, -1.41, -2.2, -3.85, 0.03, -2.43, 1.0, -1.69, 1.64, -1.11, 2.2, -0.55, 2.75, 0.0 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_b1",
+    "channel" : 1,
+    "time" : "1.1000 s",
+    "amplitudeRaw" : -108.0,
+    "amplitude" : "-108.0000 µV",
+    "snippet" : [ -18.8, -24.94, -39.73, -56.68, -68.7, -86.31, -95.54, -106.69, -106.35, -106.14, -94.44, -84.66, -66.5, -53.93, -42.48, -27.14, -20.45, -10.28, -8.37, -2.1, -3.08, 1.21, -1.02, 2.54, -0.09, -2.79, 0.54, -2.2, 1.1, -1.65, 1.65, -1.1 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_b2",
+    "channel" : 1,
+    "time" : "1.7500 s",
+    "amplitudeRaw" : -96.0,
+    "amplitude" : "-96.0000 µV",
+    "snippet" : [ -17.88, -22.96, -36.42, -45.74, -62.1, -72.01, -85.9, -96.12, -95.45, -95.57, -84.8, -76.41, -59.9, -49.04, -33.12, -25.16, -13.48, -10.12, -8.72, -2.78, -3.96, 0.22, -2.06, 1.46, -1.18, 2.17, -0.56, 2.75, 0.0, -2.75, 0.55, -2.2 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_b3",
+    "channel" : 1,
+    "time" : "2.4000 s",
+    "amplitudeRaw" : -84.0,
+    "amplitude" : "-84.0000 µV",
+    "snippet" : [ -16.95, -20.99, -33.1, -40.85, -55.51, -63.77, -76.27, -79.5, -84.55, -78.95, -75.17, -68.17, -53.31, -44.15, -29.8, -23.19, -12.55, -9.95, -3.02, -3.46, 1.21, -0.77, -3.11, 0.39, -2.27, 1.07, -1.66, 1.65, -1.1, 2.2, -0.55, 2.75 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_b4",
+    "channel" : 1,
+    "time" : "3.1000 s",
+    "amplitudeRaw" : -72.0,
+    "amplitude" : "-72.0000 µV",
+    "snippet" : [ -9.97, -19.01, -23.74, -35.95, -48.91, -55.52, -66.63, -68.93, -73.65, -68.38, -65.53, -53.87, -46.71, -33.2, -26.49, -21.21, -11.62, -9.79, -3.38, -4.15, 0.33, -1.76, 1.89, -0.69, 2.69, -0.02, -2.76, 0.55, -2.2, 1.1, -1.65, 1.65 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_b_badamp",
+    "channel" : 1,
+    "time" : "3.8000 s",
+    "amplitudeRaw" : "NaN",
+    "amplitude" : "48uV@?",
+    "snippet" : [ -9.04, -17.03, -20.42, -31.06, -36.27, -47.28, -50.94, -58.36, -62.75, -57.81, -55.89, -45.63, -40.12, -28.31, -23.17, -13.18, -10.69, -3.57, -3.73, -4.83, -0.55, -2.75, 0.84, -1.77, 1.6, -1.12, 2.19, -0.55, 2.75, 0.0, -2.75, 0.55 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : "amplitude literal corrupt; must be retained raw"
+  }, {
+    "id" : "spk_b6",
+    "channel" : 1,
+    "time" : "4.4000 s",
+    "amplitudeRaw" : -48.0,
+    "amplitude" : "-48.0000 µV",
+    "snippet" : [ -8.11, -15.06, -17.11, -26.17, -29.68, -39.03, -41.3, -47.79, -45.8, -47.24, -40.2, -37.38, -33.53, -23.42, -19.86, -11.21, -9.76, -3.41, -4.08, 0.53, -1.43, 2.31, -0.21, -2.84, 0.51, -2.22, 1.09, -1.65, 1.65, -1.1, 2.2, -0.55 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_b7",
+    "channel" : 1,
+    "time" : "4.9000 s",
+    "amplitudeRaw" : -36.0,
+    "amplitude" : "-36.0000 µV",
+    "snippet" : [ -7.18, -7.03, -13.79, -15.23, -23.08, -30.79, -31.66, -37.21, -34.9, -36.66, -30.56, -29.14, -20.88, -18.53, -10.49, -9.23, -8.83, -3.24, -4.44, -0.15, -2.31, 1.32, -1.26, 2.13, -0.58, 2.74, 0.0, -2.75, 0.55, -2.2, 1.1, -1.65 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_c0",
+    "channel" : 2,
+    "time" : "0.620 s",
+    "amplitudeRaw" : -90.0,
+    "amplitude" : "-90 µV",
+    "snippet" : [ -13.56, -24.17, -30.91, -45.49, -54.96, -70.09, -83.29, -86.98, -92.2, -86.43, -82.19, -68.44, -58.81, -42.74, -33.66, -20.32, -15.21, -12.24, -5.05, -5.32, -0.55, -2.47, 1.26, -1.27, 2.13, -0.58, 2.74, 0.0, -2.75, 0.55, -2.2, 1.1 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : null
+  }, {
+    "id" : "spk_c_refr",
+    "channel" : 2,
+    "time" : "0.6206 s",
+    "amplitudeRaw" : -88.0,
+    "amplitude" : "-88 µV",
+    "snippet" : [ -14.32, -24.76, -31.27, -45.59, -54.77, -69.63, -76.55, -86.14, -85.25, -85.59, -81.5, -67.98, -58.62, -42.84, -34.02, -20.91, -15.97, -7.08, -6.02, -0.3, -1.61, -3.55, 0.17, -2.37, 1.03, -1.68, 1.64, -1.1, 2.2, -0.55, 2.75, 0.0 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : "0.6 ms after spk_c0 -> refractory violation evidence"
+  }, {
+    "id" : "spk_c1",
+    "channel" : 2,
+    "time" : "1.300 s",
+    "amplitudeRaw" : -95.0,
+    "amplitude" : "-95 µV",
+    "snippet" : [ -16.61, -21.61, -34.95, -50.19, -60.36, -76.19, -83.91, -94.05, -93.35, -93.5, -82.81, -74.54, -58.16, -47.44, -37.7, -23.81, -18.26, -8.91, -7.56, -1.65, -2.84, 1.33, -0.96, 2.57, -0.08, -2.78, 0.54, -2.2, 1.1, -1.65, 1.65, -1.1 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : 3,
+    "note" : "propagation master"
+  }, {
+    "id" : "spk_c1p",
+    "channel" : 3,
+    "time" : "1.300 s",
+    "amplitudeRaw" : -60.0,
+    "amplitude" : "-60 µV",
+    "snippet" : [ -11.79, -13.73, -23.17, -27.76, -39.02, -43.98, -53.69, -61.11, -59.45, -60.56, -52.59, -48.38, -36.82, -31.06, -19.87, -15.93, -7.39, -6.32, -6.48, -1.53, -3.3, 0.55, -1.91, 1.53, -1.15, 2.18, -0.56, 2.75, 0.0, -2.75, 0.55, -2.2 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : 2,
+    "note" : "same instant on channel 3 -> concurrent spike / multi-channel propagation"
+  }, {
+    "id" : "spk_c3",
+    "channel" : 2,
+    "time" : "3.330 s",
+    "amplitudeRaw" : -92.0,
+    "amplitude" : "-92 µV",
+    "snippet" : [ -18.3, -23.04, -36.04, -44.84, -60.64, -70.0, -83.43, -87.28, -92.55, -86.73, -82.33, -74.4, -58.44, -48.14, -32.74, -25.24, -13.9, -10.8, -3.52, -3.74, 1.06, -0.84, -3.15, 0.37, -2.28, 1.07, -1.66, 1.65, -1.1, 2.2, -0.55, 2.75 ],
+    "sourceWaveformId" : "wav_ref_001",
+    "pairedChannel" : null,
+    "note" : "shared by both split children uC1/uC2"
+  } ],
+  "featureVersions" : [ {
+    "id" : "feat_v1",
+    "name" : "pca2-raw",
+    "description" : "2 PCA components on raw snippet amplitudes",
+    "parameters" : {
+      "components" : "2",
+      "normalization" : "none",
+      "windowPre" : "0.8 ms",
+      "windowPost" : "1.2 ms",
+      "space" : "pca"
+    }
+  }, {
+    "id" : "feat_v2",
+    "name" : "pca2-zscored-peaked",
+    "description" : "2 PCA components on per-channel z-scored, negative-peak-aligned snippets",
+    "parameters" : {
+      "alignment" : "negative-peak",
+      "space" : "pca",
+      "normalization" : "per-channel-zscore",
+      "windowPre" : "0.8 ms",
+      "windowPost" : "1.2 ms",
+      "components" : "2"
+    }
+  } ],
+  "labelBatches" : [ {
+    "id" : "labels_init",
+    "featureVersionId" : "feat_v1",
+    "parameterVersion" : "params-cluster-1",
+    "generatedAt" : "2026-09-20T08:30:00Z",
+    "assignments" : [ {
+      "spikeId" : "spk_a0",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a1",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a2",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a3",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a4",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a5",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a6",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a7",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a8",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a9",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a10",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_a_endpoint",
+      "clusterNumber" : "1",
+      "unitId" : "uA",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b0",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b1",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b2",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b3",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b4",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b_badamp",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b6",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_b7",
+      "clusterNumber" : "2",
+      "unitId" : "uB",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c0",
+      "clusterNumber" : "3",
+      "unitId" : "uC",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c_refr",
+      "clusterNumber" : "3",
+      "unitId" : "uC",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c1",
+      "clusterNumber" : "3",
+      "unitId" : "uC",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c1p",
+      "clusterNumber" : "3",
+      "unitId" : "uC",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c3",
+      "clusterNumber" : "3",
+      "unitId" : "uC",
+      "note" : null
+    } ]
+  }, {
+    "id" : "labels_revised",
+    "featureVersionId" : "feat_v2",
+    "parameterVersion" : "params-cluster-2",
+    "generatedAt" : "2026-09-20T09:15:00Z",
+    "assignments" : [ {
+      "spikeId" : "spk_a0",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a1",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a2",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a3",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a4",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a5",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a6",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a7",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a8",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a9",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a10",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a_endpoint",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_b0",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b1",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b2",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b3",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b4",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b_badamp",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b6",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b7",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_c0",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c_refr",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c1",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c1p",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c3",
+      "clusterNumber" : "13",
+      "unitId" : "uC2",
+      "note" : "split child uC2 owns the event; uC1 shares it (shared_event)"
+    }, {
+      "spikeId" : "spk_c3",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : "shared membership from split (shared_event)"
+    } ]
+  }, {
+    "id" : "labels_patched",
+    "featureVersionId" : "feat_v2",
+    "parameterVersion" : "params-cluster-2",
+    "generatedAt" : "2026-09-20T10:05:00Z",
+    "assignments" : [ {
+      "spikeId" : "spk_a0",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a1",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a2",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a3",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a4",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a5",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a6",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a7",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a8",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a9",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a10",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_a_endpoint",
+      "clusterNumber" : "7",
+      "unitId" : "uA",
+      "note" : "number changed 1->7; stable identity retained"
+    }, {
+      "spikeId" : "spk_b0",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b1",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b2",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b3",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b4",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b_badamp",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b6",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_b7",
+      "clusterNumber" : "4",
+      "unitId" : "uB",
+      "note" : "number changed 2->4"
+    }, {
+      "spikeId" : "spk_c0",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c_refr",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c1",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c1p",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : null
+    }, {
+      "spikeId" : "spk_c3",
+      "clusterNumber" : "13",
+      "unitId" : "uC2",
+      "note" : "split child uC2 owns the event; uC1 shares it (shared_event)"
+    }, {
+      "spikeId" : "spk_c3",
+      "clusterNumber" : "12",
+      "unitId" : "uC1",
+      "note" : "shared membership from split (shared_event)"
+    } ]
+  } ],
+  "steps" : [ {
+    "seq" : 0,
+    "type" : "INITIAL_IMPORT",
+    "description" : "Import raw waveform references, probe geometry, detection thresholds, feature versions, cluster labels and adjudication events as separate stores",
+    "parameterVersion" : "baseline",
+    "changedSpikeIds" : [ ],
+    "labelBatchById" : {
+      "initial" : "labels_init"
+    },
+    "decisions" : [ ],
+    "window" : null,
+    "expectedAffectedUnitIds" : [ "uA", "uB", "uC" ]
+  }, {
+    "seq" : 1,
+    "type" : "PARAMETER_REVISION",
+    "description" : "Feature version feat_v1 -> feat_v2 with z-scoring and peak alignment; cluster numbers permute and uC splits, while stable unit ids persist",
+    "parameterVersion" : "params-cluster-2",
+    "changedSpikeIds" : [ ],
+    "labelBatchById" : {
+      "revised" : "labels_revised"
+    },
+    "decisions" : [ {
+      "atTime" : "2026-09-20T09:16:00Z",
+      "action" : "SPLIT",
+      "unitId" : "uC",
+      "spikeId" : null,
+      "rationale" : "refractory violation + concurrent multi-channel propagation justify a split; both are evidence, cluster numbers are not identities",
+      "evidenceKind" : "REFRACTORY_VIOLATION+CONCURRENT_SPIKES",
+      "adopted" : true,
+      "conflictsWith" : null
+    } ],
+    "window" : null,
+    "expectedAffectedUnitIds" : [ "uA", "uB", "uC", "uC1", "uC2" ]
+  }, {
+    "seq" : 2,
+    "type" : "SOURCE_PATCH",
+    "description" : "Re-detection raises spk_a6 amplitude from -150 µV to -120 µV (one direct source changed). Only the intersecting cluster uA recomputes.",
+    "parameterVersion" : "params-cluster-2",
+    "changedSpikeIds" : [ "spk_a6" ],
+    "labelBatchById" : {
+      "patched" : "labels_patched"
+    },
+    "decisions" : [ ],
+    "window" : {
+      "start" : "3.55 s",
+      "end" : "5.00 s",
+      "closedStart" : true,
+      "closedEnd" : true
+    },
+    "expectedAffectedUnitIds" : [ "uA" ]
+  }, {
+    "seq" : 3,
+    "type" : "CONFLICTING_DECISIONS",
+    "description" : "Two human decisions on the same merge candidate disagree; accepted and rejected results are both retained with conflict diagnostics",
+    "parameterVersion" : "params-cluster-2",
+    "changedSpikeIds" : [ ],
+    "labelBatchById" : { },
+    "decisions" : [ {
+      "atTime" : "2026-09-20T11:00:00Z",
+      "action" : "MERGE_ACCEPT",
+      "unitId" : "uC1",
+      "spikeId" : null,
+      "rationale" : "reviewer A: propagation pair reflects one neuron across tetrode sites; accept merge",
+      "evidenceKind" : "CONCURRENT_SPIKES",
+      "adopted" : true,
+      "conflictsWith" : "dec_reviewer_b"
+    }, {
+      "atTime" : "2026-09-20T11:05:00Z",
+      "action" : "MERGE_REJECT",
+      "unitId" : "uC1",
+      "spikeId" : null,
+      "rationale" : "reviewer B: refractory violation still present after merge; reject",
+      "evidenceKind" : "REFRACTORY_VIOLATION",
+      "adopted" : false,
+      "conflictsWith" : "dec_reviewer_a"
+    } ],
+    "window" : null,
+    "expectedAffectedUnitIds" : [ "uC1" ]
+  } ],
+  "expectedEvidence" : [ {
+    "code" : "CONCURRENT_SPIKES",
+    "description" : "two candidate events on distinct channels share the same sample instant",
+    "unitId" : "uC",
+    "spikeIds" : [ "spk_c1", "spk_c1p" ]
+  }, {
+    "code" : "AMPLITUDE_DRIFT",
+    "description" : "uB amplitudes decay across the session; evidence of drift, not identity",
+    "unitId" : "uB",
+    "spikeIds" : [ "spk_b0", "spk_b7" ]
+  }, {
+    "code" : "CLUSTER_NUMBER_CHANGE",
+    "description" : "uA keeps stable id while cluster number changes 1 -> 7 under feat_v2",
+    "unitId" : "uA",
+    "spikeIds" : [ ]
+  }, {
+    "code" : "SPLIT_SHARED_EVENT",
+    "description" : "the two children of split uC share one detected event",
+    "unitId" : "uC",
+    "spikeIds" : [ "spk_c3" ]
+  }, {
+    "code" : "WINDOW_ENDPOINT",
+    "description" : "spike exactly at 5.000 s is included with [start,end] semantics",
+    "unitId" : "uA",
+    "spikeIds" : [ "spk_a_endpoint" ]
+  }, {
+    "code" : "REFRACTORY_VIOLATION",
+    "description" : "two spikes of one unit 0.6 ms apart violate the 1.0 ms refractory gap",
+    "unitId" : "uC",
+    "spikeIds" : [ "spk_c0", "spk_c_refr" ]
+  }, {
+    "code" : "LOCAL_FAILURE",
+    "description" : "unconvertible amplitude literal retained raw with a positioned diagnostic",
+    "unitId" : "uB",
+    "spikeIds" : [ "spk_b_badamp" ]
+  }, {
+    "code" : "DECISION_CONFLICT",
+    "description" : "two adjudicators accept vs reject the same merge candidate; both kept",
+    "unitId" : "uC",
+    "spikeIds" : [ ]
+  } ]
+}
