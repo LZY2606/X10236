@@ -1,0 +1,9 @@
+probe_id,channel_local_index,operator,value,unit,basis
+probe-shank-A,0,lt,-50,uV,negative-SD*5.0
+probe-shank-A,1,lt,-50,uV,negative-SD*5.0
+probe-shank-A,2,lt,-50,uV,negative-SD*5.0
+probe-shank-A,3,lt,-50,uV,negative-SD*5.0
+probe-shank-A,4,lt,-50,uV,negative-SD*5.0
+probe-shank-A,5,lt,-50,uV,negative-SD*5.0
+probe-shank-A,6,lt,-50,uV,negative-SD*5.0
+probe-shank-A,7,lt,-50,uV,negative-SD*5.0

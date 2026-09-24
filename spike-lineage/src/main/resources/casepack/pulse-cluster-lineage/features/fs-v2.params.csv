@@ -1,0 +1,6 @@
+param,value,unit/basis
+logBase,10,dimensionless
+ampUnit,uV,microvolt
+channelCount,8,count
+phaseSample,19,sample-index@30kHz
+note,threshold-revision-companion,annotation

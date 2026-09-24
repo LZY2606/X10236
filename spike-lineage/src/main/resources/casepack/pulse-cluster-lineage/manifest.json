@@ -1,0 +1,183 @@
+{
+  "caseId": "pulse-cluster-lineage",
+  "title": "脉冲簇谱：神经棘波候选、漂移簇与人工裁定谱系",
+  "probeId": "probe-shank-A",
+  "coordinateBasis": {
+    "unit": "um",
+    "origin": "probe-tip"
+  },
+  "timeBasis": {
+    "t0IsoUtc": "2026-09-01T08:00:00Z",
+    "sampleRateHz": 30000.0,
+    "rateRaw": "30",
+    "rateUnit": "kHz"
+  },
+  "files": {
+    "geometry": [
+      {
+        "localIndex": 0,
+        "label": "A00",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "localIndex": 1,
+        "label": "A01",
+        "x": 0,
+        "y": 20
+      },
+      {
+        "localIndex": 2,
+        "label": "A02",
+        "x": 0,
+        "y": 40
+      },
+      {
+        "localIndex": 3,
+        "label": "A03",
+        "x": 0,
+        "y": 60
+      },
+      {
+        "localIndex": 4,
+        "label": "A04",
+        "x": 0,
+        "y": 80
+      },
+      {
+        "localIndex": 5,
+        "label": "A05",
+        "x": 0,
+        "y": 100
+      },
+      {
+        "localIndex": 6,
+        "label": "A06",
+        "x": 0,
+        "y": 120
+      },
+      {
+        "localIndex": 7,
+        "label": "A07",
+        "x": 0,
+        "y": 140
+      }
+    ],
+    "eventsCsv": "detection/events.csv",
+    "thresholdsCsv": "thresholds/thresholds-v1.csv",
+    "featureSets": [
+      {
+        "featureSetId": "fs-v1",
+        "version": 1,
+        "algorithm": "log-amp,channel-proj,peak-phase",
+        "paramsCsv": "features/fs-v1.params.csv",
+        "createdAt": "2026-09-01T00:00:00Z"
+      },
+      {
+        "featureSetId": "fs-v2",
+        "version": 2,
+        "algorithm": "log-amp,channel-proj,peak-phase",
+        "paramsCsv": "features/fs-v2.params.csv",
+        "createdAt": "2026-09-02T00:00:00Z"
+      }
+    ],
+    "labels": [
+      {
+        "labelSetId": "ls-v1",
+        "version": 1,
+        "parentLabelSetId": null,
+        "labelsCsv": "labels/labels-v1.csv",
+        "note": "initial clustering",
+        "createdAt": "2026-09-01T00:05:00Z"
+      },
+      {
+        "labelSetId": "ls-v2",
+        "version": 2,
+        "parentLabelSetId": "ls-v1",
+        "labelsCsv": "labels/labels-v2.csv",
+        "note": "renumbered after sort by channel (display numbers changed, identity stable)",
+        "createdAt": "2026-09-02T00:05:00Z"
+      },
+      {
+        "labelSetId": "ls-v3",
+        "version": 3,
+        "parentLabelSetId": "ls-v2",
+        "labelsCsv": "labels/labels-v3.csv",
+        "note": "split concurrent multichannel group; e044 shared by K_F and K_B (ambiguous)",
+        "createdAt": "2026-09-03T00:05:00Z"
+      }
+    ]
+  },
+  "replay": [
+    {
+      "stepId": "r1-import",
+      "action": "import-case",
+      "target": "detection/events.csv",
+      "expect": "materials stored in separate layers; invalid rows retained in place",
+      "affectsScope": "all"
+    },
+    {
+      "stepId": "r2-concurrent",
+      "action": "detect-concurrent",
+      "target": "tol=0.001s",
+      "expect": "groups G1/G2 marked as evidence only; cluster numbers must not become identity",
+      "affectsScope": "events within 1ms windows"
+    },
+    {
+      "stepId": "r3-amplitude-drift",
+      "action": "detect-amplitude-drift",
+      "target": "K_A",
+      "expect": "K_A flagged EVIDENCE with slope (uV/min); not auto-split",
+      "affectsScope": "K_A only"
+    },
+    {
+      "stepId": "r4-threshold-revision",
+      "action": "set-active-threshold",
+      "target": "th-v2",
+      "expect": "e080 (45uV) leaves detection; only threshold-near dependencies recompute",
+      "affectsScope": "local:dependencies-of-e080"
+    },
+    {
+      "stepId": "r5-source-patch",
+      "action": "patch-source-amplitude",
+      "target": "e062:69->92 uV",
+      "expect": "new material revision; only nodes reading e062 recompute; unrelated history intact",
+      "affectsScope": "local:dependencies-of-e062"
+    },
+    {
+      "stepId": "r6-renumber",
+      "action": "activate-label-set",
+      "target": "ls-v2",
+      "expect": "display numbers permute but clusterKey/lineage identity stable",
+      "affectsScope": "display layer"
+    },
+    {
+      "stepId": "r7-split-shared",
+      "action": "activate-label-set",
+      "target": "ls-v3",
+      "expect": "K_C split to K_D/K_E/K_F; e044 keeps both legal candidates K_F,K_B",
+      "affectsScope": "K_C subtree"
+    },
+    {
+      "stepId": "r8-window-edge",
+      "action": "set-window",
+      "target": "[14.0,22.0)",
+      "expect": "e060 included, e061 excluded; only intersecting clusters recompute",
+      "affectsScope": "intersecting-clusters"
+    },
+    {
+      "stepId": "r9-adjudicate-conflict",
+      "action": "adjudicate",
+      "target": "e044 -> K_F, then e044 -> K_B",
+      "expect": "conflicting decisions both retained; CONFLICT state; downstream marked affected",
+      "affectsScope": "downstream-of-e044"
+    },
+    {
+      "stepId": "r10-local-failure",
+      "action": "derive",
+      "target": "e090,e091",
+      "expect": "LOCAL_FAILURE nodes with positions; rest of batch still succeeds",
+      "affectsScope": "e090,e091 only"
+    }
+  ]
+}

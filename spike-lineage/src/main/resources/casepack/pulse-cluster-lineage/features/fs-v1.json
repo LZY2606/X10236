@@ -1,0 +1,12 @@
+{
+  "featureSetId": "fs-v1",
+  "version": 1,
+  "algorithm": "log-amp,channel-proj,peak-phase",
+  "params": {
+    "logBase": 10,
+    "ampUnit": "uV",
+    "channelCount": 8,
+    "phaseSample": 19
+  },
+  "createdAt": "2026-09-01T00:00:00Z"
+}
