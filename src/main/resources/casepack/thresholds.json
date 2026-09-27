@@ -1,0 +1,5 @@
+{
+  "thresholds": [
+    { "id": "thr-0001", "version": 1, "channel": "all", "value": { "value": 4.0, "unit": "sigma" }, "note": "初始检测阈值 4.0σ" }
+  ]
+}

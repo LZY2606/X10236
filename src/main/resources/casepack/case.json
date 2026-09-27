@@ -1,0 +1,12 @@
+{
+  "case_id": "case-spike-spectrum-001",
+  "title": "脉冲簇谱：神经棘波候选、漂移簇与人工裁定谱系",
+  "narrative": "神经电生理团队导入多通道检测事件、波形片段和记录时间，为单元聚类建立可回溯的合并、拆分和漂移证据。",
+  "sampling": { "rate": { "value": 30000, "unit": "Hz" } },
+  "refractory": { "value": 1.0, "unit": "ms" },
+  "window": {
+    "start": { "value": 0, "unit": "ms", "basis": "session_start" },
+    "end": { "value": 60000, "unit": "ms", "basis": "session_start" }
+  },
+  "files": ["probe.json", "thresholds.json", "features.json", "waveforms.json", "detections.json", "clusters.json", "adjudications.json", "revisions.json"]
+}

@@ -1,0 +1,13 @@
+{
+  "probe": {
+    "id": "geo-0001",
+    "version": 1,
+    "coordinate_basis": "probe_shank_origin_top",
+    "sites": [
+      { "channel": 0, "x": { "value": 0, "unit": "µm" }, "y": { "value": 0, "unit": "µm" } },
+      { "channel": 1, "x": { "value": 0, "unit": "µm" }, "y": { "value": 25, "unit": "µm" } },
+      { "channel": 2, "x": { "value": 0, "unit": "µm" }, "y": { "value": 50, "unit": "µm" } },
+      { "channel": 3, "x": { "value": 0, "unit": "µm" }, "y": { "value": 75, "unit": "µm" } }
+    ]
+  }
+}

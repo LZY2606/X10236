@@ -1,0 +1,5 @@
+{
+  "features": [
+    { "id": "fv-0001", "version": 1, "algorithm": "pca", "params": { "components": 2, "input": "waveform_snippet", "normalization": "zscore" } }
+  ]
+}

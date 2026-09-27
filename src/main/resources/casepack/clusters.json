@@ -1,0 +1,7 @@
+{
+  "clusters": [
+    { "uid": "clu-0001", "label_index": 1, "putative_class": "pyramidal", "note": "宽波形，低发放，含一对不应期违例候选" },
+    { "uid": "clu-0002", "label_index": 2, "putative_class": "interneuron", "note": "幅度随时间漂移 180→120 µV" },
+    { "uid": "clu-0003", "label_index": 3, "putative_class": "projection", "note": "同一棘波跨通道传播" }
+  ]
+}
