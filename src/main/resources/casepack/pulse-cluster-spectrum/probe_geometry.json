@@ -1,0 +1,28 @@
+{
+  "kind": "probe_geometry",
+  "probe_id": "NP2-tetrode-001",
+  "coordinate_basis": "PROBE_COORDINATE",
+  "unit": "um",
+  "channels": [
+    {
+      "channel": 0,
+      "x": "0",
+      "y": "0"
+    },
+    {
+      "channel": 1,
+      "x": "0",
+      "y": "20"
+    },
+    {
+      "channel": 2,
+      "x": "32",
+      "y": "0"
+    },
+    {
+      "channel": 3,
+      "x": "32",
+      "y": "20"
+    }
+  ]
+}

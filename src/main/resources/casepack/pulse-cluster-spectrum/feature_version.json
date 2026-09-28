@@ -1,0 +1,8 @@
+{
+  "kind": "feature_version",
+  "version": "feat-pca-v1",
+  "method": "PCA",
+  "dims": 2,
+  "time_basis": "RECORDING_CLOCK",
+  "unit": "uV"
+}

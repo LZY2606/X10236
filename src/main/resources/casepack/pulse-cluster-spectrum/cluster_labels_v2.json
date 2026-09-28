@@ -1,0 +1,42 @@
+{
+  "kind": "cluster_labels",
+  "version": "labels-v2",
+  "note": "sorter renumbered without re-sorting; continuity requires adjudicated evidence",
+  "renumbering": [
+    {
+      "from_label": "3",
+      "to_label": "7",
+      "from_set": "labels-v1"
+    },
+    {
+      "from_label": "5",
+      "to_label": "9",
+      "from_set": "labels-v1"
+    },
+    {
+      "from_label": "4",
+      "to_label": "4",
+      "from_set": "labels-v1"
+    }
+  ],
+  "labels": [
+    {
+      "label": "7",
+      "channels": [
+        0
+      ]
+    },
+    {
+      "label": "4",
+      "channels": [
+        1
+      ]
+    },
+    {
+      "label": "9",
+      "channels": [
+        2
+      ]
+    }
+  ]
+}

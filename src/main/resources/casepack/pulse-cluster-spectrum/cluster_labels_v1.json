@@ -1,0 +1,25 @@
+{
+  "kind": "cluster_labels",
+  "version": "labels-v1",
+  "note": "sorter labels at version v1; numbers are evidence, not stable identity",
+  "labels": [
+    {
+      "label": "3",
+      "channels": [
+        0
+      ]
+    },
+    {
+      "label": "4",
+      "channels": [
+        1
+      ]
+    },
+    {
+      "label": "5",
+      "channels": [
+        2
+      ]
+    }
+  ]
+}
