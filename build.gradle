@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'spike'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+dependencies {
+    implementation 'io.javalin:javalin:6.4.0'
+    implementation 'org.xerial:sqlite-jdbc:3.46.1.3'
+    implementation 'org.slf4j:slf4j-simple:2.0.16'
+    testImplementation platform('org.junit:junit-bom:5.11.3')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+application {
+    mainClass = 'spike.Main'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named('run') {
+    // allow --args
+}
